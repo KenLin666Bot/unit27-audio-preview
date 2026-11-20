@@ -1,0 +1,1331 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="Unit27有声预习" />
+  <title>Unit 27 烷烃与烯烃 · 有声互动预习课 | Mastering Chemistry</title>
+  <style>
+    :root {
+      --bg-app: #f1f5f9;
+      --bg-card: #ffffff;
+      --bg-subtle: #f8fafc;
+      --text-main: #0f172a;
+      --text-sec: #334155;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --border-strong: #cbd5e1;
+
+      --primary: #059669;
+      --primary-dark: #047857;
+      --primary-soft: #ecfdf5;
+
+      --teal: #0d9488;
+      --teal-soft: #f0fdfa;
+      --amber: #d97706;
+      --amber-soft: #fffbeb;
+      --rose: #e11d48;
+      --rose-soft: #fff1f2;
+      --emerald: #059669;
+      --emerald-soft: #ecfdf5;
+
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 16px;
+      --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.06);
+      --shadow-md: 0 8px 24px rgba(15, 23, 42, 0.08);
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg-app);
+      color: var(--text-main);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      font-size: 15.5px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      padding-bottom: 108px;
+    }
+
+    .top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 90;
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 10px 22px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-badge {
+      width: 40px;
+      height: 40px;
+      border-radius: 11px;
+      background: linear-gradient(135deg, #059669, #0d9488);
+      color: #fff;
+      font-weight: 800;
+      font-size: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: var(--shadow-sm);
+      flex-shrink: 0;
+    }
+
+    .brand-title {
+      font-size: 16.5px;
+      font-weight: 800;
+      color: var(--text-main);
+      line-height: 1.25;
+    }
+
+    .brand-sub {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    .top-actions {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .pill-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 5px 10px;
+      border-radius: 999px;
+      font-size: 12.2px;
+      font-weight: 600;
+      text-decoration: none;
+      border: 1px solid var(--border-strong);
+      background: var(--bg-subtle);
+      color: var(--text-sec);
+      transition: all 0.15s;
+      cursor: pointer;
+    }
+
+    .pill-link:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+      background: var(--primary-soft);
+    }
+
+    .pill-link.primary-pill {
+      background: var(--primary-soft);
+      border-color: var(--border-strong);
+      color: var(--primary-dark);
+    }
+
+    .pill-link.active-unit-pill {
+      background: var(--primary);
+      border-color: var(--primary);
+      color: #ffffff;
+      cursor: default;
+      font-weight: 700;
+    }
+
+    .ep-strip-wrap {
+      max-width: 1440px;
+      margin: 14px auto 0;
+      padding: 0 18px;
+    }
+
+    .ep-strip {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(195px, 1fr));
+      gap: 10px;
+      overflow-x: auto;
+      padding-bottom: 4px;
+    }
+
+    .ep-tab {
+      background: var(--bg-card);
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 10px 12px;
+      text-align: left;
+      cursor: pointer;
+      transition: all 0.18s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 6px;
+      position: relative;
+    }
+
+    .ep-tab:hover {
+      border-color: var(--primary);
+      transform: translateY(-1px);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .ep-tab.active {
+      border-color: var(--primary);
+      background: linear-gradient(180deg, var(--primary-soft) 0%, #ffffff 100%);
+      box-shadow: 0 4px 14px rgba(15, 23, 42, 0.09);
+    }
+
+    .ep-tab-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 11.5px;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .ep-done-dot {
+      font-size: 11px;
+      color: var(--emerald);
+      background: var(--emerald-soft);
+      padding: 1px 6px;
+      border-radius: 99px;
+      font-weight: 700;
+    }
+
+    .ep-tab-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text-main);
+      line-height: 1.35;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .ep-tab-meta {
+      font-size: 11.5px;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .classroom-grid {
+      max-width: 1440px;
+      margin: 14px auto 24px;
+      padding: 0 18px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.34fr) minmax(360px, 1fr);
+      gap: 18px;
+      align-items: start;
+    }
+
+    @media (max-width: 1060px) {
+      .classroom-grid { grid-template-columns: 1fr; }
+      .ep-strip { grid-template-columns: repeat(4, 235px); }
+    }
+
+    .blackboard-pane {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .ep-hero-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 16px 20px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .ep-hero-kicker {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12.5px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 4px;
+    }
+
+    .ep-hero-title {
+      margin: 0 0 4px;
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--text-main);
+    }
+
+    .ep-hero-en {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+    }
+
+    .ep-goal-box {
+      background: var(--bg-subtle);
+      border-left: 3.5px solid var(--primary);
+      padding: 8px 12px;
+      border-radius: 0 8px 8px 0;
+      font-size: 13.5px;
+      color: var(--text-sec);
+      margin-bottom: 10px;
+    }
+
+    .term-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .term-chip {
+      font-size: 12px;
+      background: #f1f5f9;
+      border: 1px solid #cbd5e1;
+      border-radius: 999px;
+      padding: 3px 10px;
+      color: #1e293b;
+    }
+
+    .term-chip b {
+      color: var(--primary-dark);
+      font-weight: 700;
+    }
+
+    .board-card {
+      background: var(--bg-card);
+      border: 2px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 16px 18px;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.25s ease;
+      position: relative;
+    }
+
+    .board-card.is-active-board {
+      border-color: var(--primary);
+      box-shadow: 0 10px 28px rgba(15, 23, 42, 0.11);
+      background: #ffffff;
+    }
+
+    .board-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+    }
+
+    .board-tag-wrap {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .board-tag {
+      font-size: 12px;
+      font-weight: 700;
+      padding: 3px 9px;
+      border-radius: 6px;
+      background: #e2e8f0;
+      color: #334155;
+    }
+
+    .board-card.is-active-board .board-tag {
+      background: var(--primary);
+      color: #ffffff;
+    }
+
+    .live-pill {
+      display: none;
+      align-items: center;
+      gap: 5px;
+      font-size: 11.5px;
+      font-weight: 700;
+      color: var(--emerald);
+      background: var(--emerald-soft);
+      border: 1px solid #a7f3d0;
+      padding: 2px 8px;
+      border-radius: 999px;
+      animation: pulseGlow 1.8s infinite;
+    }
+
+    .board-card.is-active-board .live-pill {
+      display: inline-flex;
+    }
+
+    @keyframes pulseGlow {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.68; }
+    }
+
+    .board-jump-btn {
+      background: var(--primary-soft);
+      color: var(--primary-dark);
+      border: 1px solid var(--border-strong);
+      border-radius: 999px;
+      padding: 4px 11px;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+
+    .board-jump-btn:hover {
+      background: var(--primary);
+      color: #fff;
+    }
+
+    .board-title {
+      margin: 0 0 12px;
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--text-main);
+    }
+
+    .board-grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    @media (max-width: 720px) {
+      .board-grid-2 { grid-template-columns: 1fr; }
+    }
+
+    .b-box {
+      border-radius: 10px;
+      padding: 12px 14px;
+      border: 1px solid var(--border);
+    }
+
+    .b-amber { background: #fffbeb; border-color: #fde68a; }
+    .b-blue  { background: #eff6ff; border-color: #bfdbfe; }
+    .b-rose  { background: #fff1f2; border-color: #fecdd3; }
+    .b-teal  { background: #f0fdfa; border-color: #99f6e4; }
+
+    .b-box-title {
+      font-size: 13.5px;
+      font-weight: 800;
+      margin-bottom: 8px;
+      color: #0f172a;
+    }
+
+    .b-eq {
+      background: #ffffff;
+      border: 1px solid rgba(15, 23, 42, 0.1);
+      border-radius: 8px;
+      padding: 8px 11px;
+      font-family: "SF Pro Text", -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      color: #0f172a;
+      margin-bottom: 7px;
+      overflow-x: auto;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+
+    .b-points {
+      margin: 6px 0 0;
+      padding-left: 18px;
+      font-size: 13px;
+      color: var(--text-sec);
+    }
+
+    .b-points li { margin-bottom: 4px; }
+
+    .b-quote {
+      background: linear-gradient(90deg, var(--primary-soft), #f8fafc);
+      border-left: 4px solid var(--primary);
+      padding: 10px 14px;
+      border-radius: 0 10px 10px 0;
+      margin-bottom: 10px;
+    }
+
+    .b-quote-en {
+      font-size: 13.3px;
+      color: #1e3a8a;
+      margin-bottom: 5px;
+      line-height: 1.6;
+    }
+
+    .b-quote-zh {
+      font-size: 13px;
+      color: #0f172a;
+    }
+
+    .b-scheme {
+      background: #0f172a;
+      color: #f8fafc;
+      border-radius: 10px;
+      padding: 11px 14px;
+      overflow-x: auto;
+      margin-bottom: 8px;
+    }
+
+    .b-scheme pre {
+      margin: 0;
+      font-family: "SF Mono", "Menlo", "Monaco", "Consolas", monospace;
+      font-size: 12.5px;
+      line-height: 1.54;
+      color: #e2e8f0;
+    }
+
+    .b-mini-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12.8px;
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .b-mini-table th {
+      background: #f1f5f9;
+      color: #0f172a;
+      font-weight: 700;
+      text-align: left;
+      padding: 8px 10px;
+      border: 1px solid var(--border);
+    }
+
+    .b-mini-table td {
+      padding: 8px 10px;
+      border: 1px solid var(--border);
+      vertical-align: top;
+      color: var(--text-sec);
+    }
+
+    .b-note {
+      background: #fffbeb;
+      border: 1px solid #fde68a;
+      border-radius: 8px;
+      padding: 7px 11px;
+      font-size: 12.8px;
+      color: #92400e;
+    }
+
+    .b-tip-text {
+      margin: 0;
+      font-size: 13px;
+      color: var(--text-sec);
+    }
+
+    .board-svg {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 10px;
+    }
+
+    code {
+      font-family: "SF Mono", "Menlo", monospace;
+      font-size: 0.92em;
+      background: rgba(15, 23, 42, 0.06);
+      padding: 1px 5px;
+      border-radius: 4px;
+      color: #be123c;
+    }
+
+    .quiz-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 16px 20px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .quiz-head {
+      font-size: 15.5px;
+      font-weight: 800;
+      margin: 0 0 12px;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .q-item {
+      border-top: 1px solid var(--border);
+      padding-top: 12px;
+      margin-top: 12px;
+    }
+
+    .q-item:first-of-type {
+      border-top: none;
+      padding-top: 0;
+      margin-top: 0;
+    }
+
+    .q-stem {
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: var(--text-main);
+    }
+
+    .q-opts {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .q-opt-btn {
+      text-align: left;
+      padding: 8px 12px;
+      border-radius: 8px;
+      border: 1px solid var(--border-strong);
+      background: var(--bg-subtle);
+      font-size: 13.5px;
+      color: var(--text-sec);
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+
+    .q-opt-btn:hover {
+      border-color: var(--primary);
+      background: var(--primary-soft);
+    }
+
+    .q-opt-btn.correct {
+      background: var(--emerald-soft);
+      border-color: var(--emerald);
+      color: #065f46;
+      font-weight: 700;
+    }
+
+    .q-opt-btn.wrong {
+      background: var(--rose-soft);
+      border-color: var(--rose);
+      color: #9f1239;
+    }
+
+    .q-exp {
+      display: none;
+      margin-top: 8px;
+      padding: 8px 12px;
+      border-radius: 8px;
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      font-size: 13px;
+      color: #166534;
+    }
+
+    /* Right Pane: Single-Teacher Structured Lecture Stream */
+    .transcript-pane {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      position: sticky;
+      top: 72px;
+      max-height: calc(100vh - 184px);
+    }
+
+    @media (max-width: 1060px) {
+      .transcript-pane {
+        position: static;
+        max-height: none;
+      }
+    }
+
+    .transcript-header {
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .transcript-title {
+      font-size: 14.5px;
+      font-weight: 800;
+      color: var(--text-main);
+    }
+
+    .auto-scroll-btn {
+      font-size: 12px;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--border-strong);
+      background: var(--bg-subtle);
+      color: var(--text-sec);
+      cursor: pointer;
+    }
+
+    .auto-scroll-btn.on {
+      background: var(--primary-soft);
+      border-color: var(--primary);
+      color: var(--primary-dark);
+    }
+
+    .transcript-list {
+      padding: 14px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .turn-bubble {
+      border-radius: 12px;
+      padding: 11px 13px;
+      border: 1.5px solid #e2e8f0;
+      border-left-width: 4px;
+      background: #f8fafc;
+      cursor: pointer;
+      transition: all 0.18s ease;
+      position: relative;
+    }
+
+    .turn-bubble.role-concept { border-left-color: #4f46e5; }
+    .turn-bubble.role-example { border-left-color: #0d9488; background: #f8fdfa; }
+    .turn-bubble.role-trap    { border-left-color: #e11d48; background: #fff9fa; }
+    .turn-bubble.role-summary { border-left-color: #059669; background: #f6fef9; }
+
+    .turn-bubble:hover {
+      border-color: var(--primary);
+      transform: translateX(1px);
+    }
+
+    .turn-bubble.active-turn {
+      background: var(--primary-soft);
+      border-color: var(--primary);
+      border-left-width: 4.5px;
+      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.1);
+    }
+
+    .turn-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 5px;
+      font-size: 12px;
+    }
+
+    .speaker-name {
+      font-weight: 800;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      color: var(--primary-dark);
+    }
+
+    .role-trap .speaker-name { color: #be123c; }
+    .role-example .speaker-name { color: #0f766e; }
+    .role-summary .speaker-name { color: #047857; }
+
+    .turn-time {
+      font-family: "SF Mono", "Menlo", monospace;
+      font-size: 11px;
+      color: var(--text-muted);
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid #e2e8f0;
+      padding: 1px 6px;
+      border-radius: 4px;
+      flex-shrink: 0;
+    }
+
+    .turn-text {
+      font-size: 14px;
+      line-height: 1.64;
+      color: var(--text-main);
+    }
+
+    /* Sticky Bottom Audio Dock */
+    .audio-dock {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 120;
+      background: rgba(15, 23, 42, 0.96);
+      backdrop-filter: blur(14px);
+      color: #f8fafc;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      padding: 10px 20px 12px;
+      box-shadow: 0 -8px 28px rgba(15, 23, 42, 0.25);
+    }
+
+    .dock-inner {
+      max-width: 1440px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+
+    .scrubber-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .time-lbl {
+      font-family: "SF Mono", "Menlo", monospace;
+      font-size: 12px;
+      color: #cbd5e1;
+      min-width: 44px;
+    }
+
+    .scrubber-wrap {
+      position: relative;
+      flex: 1;
+      display: flex;
+      align-items: center;
+    }
+
+    #seek-slider {
+      width: 100%;
+      accent-color: #818cf8;
+      cursor: pointer;
+      height: 6px;
+    }
+
+    .controls-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .ctrl-left, .ctrl-center, .ctrl-right {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .now-playing-label {
+      font-size: 13px;
+      font-weight: 700;
+      color: #e2e8f0;
+      max-width: 360px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .dock-btn {
+      background: rgba(255, 255, 255, 0.1);
+      color: #f8fafc;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: 8px;
+      padding: 5px 11px;
+      font-size: 12.5px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+
+    .dock-btn:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .play-main-btn {
+      background: #818cf8;
+      color: #0f172a;
+      border: none;
+      border-radius: 999px;
+      padding: 7px 20px;
+      font-size: 14px;
+      font-weight: 800;
+      cursor: pointer;
+      box-shadow: 0 2px 10px rgba(129, 140, 248, 0.4);
+    }
+
+    .play-main-btn:hover {
+      background: #a5b4fc;
+    }
+
+    .speed-select {
+      background: rgba(255, 255, 255, 0.12);
+      color: #f8fafc;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 8px;
+      padding: 5px 8px;
+      font-size: 12.5px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .speed-select option {
+      color: #0f172a;
+      background: #ffffff;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="top-bar">
+    <div class="brand">
+      <div class="brand-badge">U27</div>
+      <div>
+        <div class="brand-title">Unit 27 烷烃与烯烃 · 双语有声互动预习课</div>
+        <div class="brand-sub">HKDSE 精工版《Mastering Chemistry》Book 3A · Topic 7 · 陈老师沉稳主讲 + 动态声画同步黑板</div>
+      </div>
+    </div>
+    <div class="top-actions">
+      <a class="pill-link primary-pill" id="download-merged-link" href="#" download>📥 下载完整连听版 MP3 (<span id="total-dur-badge"></span>)</a>
+      <a class="pill-link" id="download-ep-link" href="#" download>🎵 下载本讲 MP3</a>
+      <a class="pill-link" id="handout-md-link" href="./Unit27_双语课堂讲义与逐字稿.md" target="_blank">📄 双语讲义逐字稿</a>
+      <a class="pill-link unit-jump-link" data-gh="https://kenlin666bot.github.io/unit25-audio-preview/" href="../Unit25_有声互动预习课/Unit25_有声互动预习课.html" title="Unit 25 化石燃料">U25</a>
+      <a class="pill-link unit-jump-link" data-gh="https://kenlin666bot.github.io/unit26-audio-preview/" href="../Unit26_有声互动预习课/Unit26_有声互动预习课.html" title="Unit 26 同系物、结构式及碳化合物的命名">U26</a>
+      <span class="pill-link active-unit-pill" title="当前单元：Unit 27 烷烃与烯烃">🎧 U27</span>
+      <a class="pill-link unit-jump-link" data-gh="https://kenlin666bot.github.io/unit28-audio-preview/" href="../Unit28_有声互动预习课/Unit28_有声互动预习课.html" title="Unit 28 加成聚合物与塑料">U28</a>
+      <a class="pill-link unit-jump-link" data-gh="https://kenlin666bot.github.io/unit29-audio-preview/" href="../Unit29_有声互动预习课/Unit29_有声互动预习课.html" title="Unit 29 碳化合物的命名及物理性质">U29</a>
+      <a class="pill-link unit-jump-link" data-gh="https://kenlin666bot.github.io/unit30-audio-preview/" href="../Unit30_有声互动预习课/Unit30_有声互动预习课.html" title="Unit 30 同分异构现象">U30</a>
+      <a class="pill-link unit-jump-link" data-gh="https://kenlin666bot.github.io/unit31-audio-preview/" href="../Unit31_有声互动预习课/Unit31_有声互动预习课.html" title="Unit 31 各官能团的典型反应">U31</a>
+      <a class="pill-link unit-jump-link" data-gh="https://kenlin666bot.github.io/unit32-audio-preview/" href="../Unit32_有声互动预习课/Unit32_有声互动预习课.html" title="Unit 32 碳化合物的合成">U32</a>
+      <a class="pill-link unit-jump-link" data-gh="https://kenlin666bot.github.io/unit33-audio-preview/" href="../Unit33_有声互动预习课/Unit33_有声互动预习课.html" title="Unit 33 重要的有机物质">U33</a>
+      <a class="pill-link" id="companion-site-link" href="../Mastering_Chemistry_Topic7_8_学习站.html">📖 Topic 7 &amp; 8 闯关站</a>
+    </div>
+  </header>
+
+  <section class="ep-strip-wrap" aria-label="微课章节选择">
+    <div class="ep-strip" id="ep-strip"></div>
+  </section>
+
+  <main class="classroom-grid">
+    <!-- Left Synchronized Blackboard -->
+    <div class="blackboard-pane">
+      <div class="ep-hero-card" id="ep-hero"></div>
+      <div id="boards-container" style="display:flex; flex-direction:column; gap:14px;"></div>
+      <div class="quiz-card" id="quiz-container"></div>
+    </div>
+
+    <!-- Right Structured Lecture Stream -->
+    <aside class="transcript-pane" aria-label="课堂主讲逐字稿">
+      <div class="transcript-header">
+        <div class="transcript-title">🎙️ 陈老师双语精讲逐字稿（点击任意段跳读）</div>
+        <button class="auto-scroll-btn on" id="auto-scroll-toggle">🎯 自动跟随：开</button>
+      </div>
+      <div class="transcript-list" id="transcript-list"></div>
+    </aside>
+  </main>
+
+  <!-- Sticky Bottom Audio Player -->
+  <footer class="audio-dock">
+    <audio id="classroom-audio" preload="metadata"></audio>
+    <div class="dock-inner">
+      <div class="scrubber-row">
+        <span class="time-lbl" id="cur-time">00:00</span>
+        <div class="scrubber-wrap">
+          <input type="range" id="seek-slider" min="0" max="100" step="0.1" value="0" aria-label="播放进度" />
+        </div>
+        <span class="time-lbl" id="dur-time">00:00</span>
+      </div>
+      <div class="controls-row">
+        <div class="ctrl-left">
+          <span class="now-playing-label" id="dock-ep-label">正在加载...</span>
+        </div>
+        <div class="ctrl-center">
+          <button class="dock-btn" id="prev-ep-btn" title="上一讲">⏮ 上一讲</button>
+          <button class="dock-btn" id="rew-btn" title="后退 10 秒">⏪ -10s</button>
+          <button class="play-main-btn" id="play-btn">▶ 开始听课</button>
+          <button class="dock-btn" id="fwd-btn" title="前进 10 秒">+10s ⏩</button>
+          <button class="dock-btn" id="next-ep-btn" title="下一讲">下一讲 ⏭</button>
+        </div>
+        <div class="ctrl-right">
+          <label for="speed-select" style="font-size:12px;color:#cbd5e1;">语速</label>
+          <select class="speed-select" id="speed-select">
+            <option value="0.85">0.85x 慢速细听</option>
+            <option value="1" selected>1.0x 标准课堂</option>
+            <option value="1.15">1.15x 轻快预习</option>
+            <option value="1.25">1.25x 高效复习</option>
+            <option value="1.5">1.5x 考前速刷</option>
+          </select>
+          <button class="dock-btn" id="autoplay-btn">🔁 连播：开</button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    window.COURSE_DATA = {"totalDuration": 1733.69, "mergedAudioFile": "audio/00_Unit27_烷烃与烯烃_完整连听版.mp3", "episodes": [{"id": "ep1", "epNum": "第 1 讲", "code": "27.1 – 27.2", "fileSlug": "01_27.1-27.2_烷烃不活泼性燃烧与紫外光自由基取代机理", "titleZh": "烷烃的稳定性、燃烧反应与紫外光（UV light）下的自由基取代三步机理", "titleEn": "Unreactivity, Combustion & Free Radical Substitution of Alkanes", "goal": "从微观键强与非极性本质理解饱和烷烃（alkanes）的室温稳定性与完全/不完全燃烧规律，完整攻克紫外光（UV light）下自由基取代反应（free radical substitution）三阶段机理、精工版点叉电子图规范及多取代产率调控。", "keyTerms": [{"en": "saturated hydrocarbon", "zh": "饱和碳氢化合物"}, {"en": "complete / incomplete combustion", "zh": "完全燃烧 / 不完全燃烧"}, {"en": "free radical substitution", "zh": "自由基取代反应"}, {"en": "homolytic fission", "zh": "均裂（各带走 1 个电子）"}, {"en": "Initiation / Propagation / Termination", "zh": "链引发 / 链增长 / 链终止"}, {"en": "excess methane / excess chlorine", "zh": "过量甲烷 / 过量氯气"}], "boards": [{"id": "b1_1", "tag": "板书 1 · 稳定性与现象 (27.1–27.2A)", "title": "为什么饱和烷烃室温下“刀枪不入”？燃烧反应与紫外光溴取代现象", "html": "\n                <div class=\"b-quote\">\n                  <div class=\"b-quote-en\"><strong>Alkanes（烷烃）</strong> are <strong>saturated hydrocarbons（饱和碳氢化合物）</strong>, unreactive at r.t.p. towards acids, alkalis, dehydrating agents &amp; oxidizing agents.</div>\n                  <div class=\"b-quote-zh\">💡 <strong>两大微观原因</strong>：① <code>C—C</code> 与 <code>C—H</code> <strong>单共价键极牢固（strong single covalent bonds）</strong>，室温难断键；② 碳氢电负性相近，键<strong>几乎非极性（almost non-polar）</strong>，无正负电中心吸引带电试剂。</div>\n                </div>\n                <div class=\"board-grid-2\">\n                  <div class=\"b-box b-amber\">\n                    <div class=\"b-box-title\">① 燃烧反应 Combustion of Alkanes</div>\n                    <div class=\"b-eq\">CH<sub>4</sub>(g) + 2O<sub>2</sub>(g) &nbsp;⟶&nbsp; CO<sub>2</sub>(g) + 2H<sub>2</sub>O(l)</div>\n                    <ul class=\"b-points\">\n                      <li><strong>完全燃烧（<code>complete combustion</code>，氧气充足）</strong>：放热，生成 <code>CO₂ + H₂O</code>，短链烷烃呈干净蓝色无烟火焰。</li>\n                      <li><strong>不完全燃烧（<code>incomplete combustion</code>，氧气不足）</strong>：生成剧毒 <strong><code>CO(g)</code></strong> 与黑烟碳粒 <strong><code>carbon particulates / soot, C(s)</code></strong>（明亮黄焰冒黑烟）。</li>\n                    </ul>\n                  </div>\n                  <div class=\"b-box b-rose\">\n                    <div class=\"b-box-title\">② 与 <code>Br₂ (in organic solvent)</code> 的取代现象</div>\n                    <div class=\"b-eq\">C<sub>6</sub>H<sub>14</sub> + Br<sub>2</sub> &nbsp;──(<strong>UV light / sunlight</strong>)──▶&nbsp; C<sub>6</sub>H<sub>13</sub>Br + HBr(g)</div>\n                    <ul class=\"b-points\">\n                      <li><strong>黑暗中（<code>in the dark</code>）</strong>：<strong>无明显变化（<code>no observable change</code>）</strong>！</li>\n                      <li><strong>紫外光 / 阳光下（<code>UV light / sunlight</code>）</strong>：红棕/橙色溴溶液<strong>缓慢褪色（<code>decolorizes slowly</code>）</strong>，且管口冒出 <strong><code>HBr(g)</code> 白雾（<code>misty fumes</code>，使湿润蓝石蕊试纸变红）</strong>！</li>\n                    </ul>\n                  </div>\n                </div>\n                ", "start": 0.25, "end": 172.578}, {"id": "b1_2", "tag": "板书 2 · 三步机理与电子图 (27.2B)", "title": "精工版核心规范：Initiation 点叉电子图与自由基取代三阶段方程式", "html": "\n<svg class=\"board-svg\" viewBox=\"0 0 780 245\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"精工版自由基取代 Initiation 阶段氯气均裂点叉电子图\">\n  <defs>\n    <linearGradient id=\"u27InitBg\" x1=\"0\" y1=\"0\" x2=\"1\" y2=\"1\">\n      <stop offset=\"0%\" stop-color=\"#fefce8\"/>\n      <stop offset=\"100%\" stop-color=\"#ecfdf5\"/>\n    </linearGradient>\n  </defs>\n  <rect x=\"0\" y=\"0\" width=\"780\" height=\"245\" rx=\"12\" fill=\"url(#u27InitBg)\" stroke=\"#fcd34d\" stroke-width=\"1.5\"/>\n  <text x=\"390\" y=\"23\" text-anchor=\"middle\" font-size=\"13.8\" font-weight=\"800\" fill=\"#78350f\">精工版必考电子图：Initiation（链引发）Cl₂ 均裂 —— Outermost shells only（只画最外层电子）</text>\n  <text x=\"390\" y=\"42\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"600\" fill=\"#92400e\">规范红线：① 箭头上方必写 UV light（严禁写光物理符号、严禁画鱼钩弯箭头） ② 点叉不同必须用 + 号拆开相加！</text>\n\n  <!-- Left Card: Cl2 overlapping circles -->\n  <rect x=\"16\" y=\"52\" width=\"258\" height=\"180\" rx=\"10\" fill=\"#ffffff\" stroke=\"#fde68a\" stroke-width=\"1.5\"/>\n  <circle cx=\"111\" cy=\"130\" r=\"45\" fill=\"none\" stroke=\"#1e293b\" stroke-width=\"1.9\"/>\n  <circle cx=\"179\" cy=\"130\" r=\"45\" fill=\"none\" stroke=\"#0284c7\" stroke-width=\"1.9\"/>\n  <text x=\"99\" y=\"136\" text-anchor=\"middle\" font-size=\"16\" font-weight=\"800\" fill=\"#1e293b\">Cl</text>\n  <text x=\"191\" y=\"136\" text-anchor=\"middle\" font-size=\"16\" font-weight=\"800\" fill=\"#0369a1\">Cl</text>\n  <!-- Left Cl: 6 non-bonding dots (3 lone pairs) -->\n  <circle cx=\"104\" cy=\"94\" r=\"3.3\" fill=\"#1e293b\"/><circle cx=\"118\" cy=\"94\" r=\"3.3\" fill=\"#1e293b\"/>\n  <circle cx=\"75\" cy=\"123\" r=\"3.3\" fill=\"#1e293b\"/><circle cx=\"75\" cy=\"137\" r=\"3.3\" fill=\"#1e293b\"/>\n  <circle cx=\"104\" cy=\"166\" r=\"3.3\" fill=\"#1e293b\"/><circle cx=\"118\" cy=\"166\" r=\"3.3\" fill=\"#1e293b\"/>\n  <!-- Shared pair in overlap: 1 dot + 1 cross -->\n  <circle cx=\"145\" cy=\"122\" r=\"3.6\" fill=\"#1e293b\"/>\n  <text x=\"145\" y=\"144\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"800\" fill=\"#dc2626\">×</text>\n  <!-- Right Cl: 6 non-bonding crosses (3 lone pairs) -->\n  <text x=\"172\" y=\"98\" text-anchor=\"middle\" font-size=\"13.5\" font-weight=\"800\" fill=\"#dc2626\">×</text>\n  <text x=\"186\" y=\"98\" text-anchor=\"middle\" font-size=\"13.5\" font-weight=\"800\" fill=\"#dc2626\">×</text>\n  <text x=\"215\" y=\"128\" text-anchor=\"middle\" font-size=\"13.5\" font-weight=\"800\" fill=\"#dc2626\">×</text>\n  <text x=\"215\" y=\"142\" text-anchor=\"middle\" font-size=\"13.5\" font-weight=\"800\" fill=\"#dc2626\">×</text>\n  <text x=\"172\" y=\"171\" text-anchor=\"middle\" font-size=\"13.5\" font-weight=\"800\" fill=\"#dc2626\">×</text>\n  <text x=\"186\" y=\"171\" text-anchor=\"middle\" font-size=\"13.5\" font-weight=\"800\" fill=\"#dc2626\">×</text>\n  <text x=\"145\" y=\"204\" text-anchor=\"middle\" font-size=\"12.5\" font-weight=\"700\" fill=\"#0f172a\">Chlorine molecule (Cl₂)</text>\n  <text x=\"145\" y=\"221\" text-anchor=\"middle\" font-size=\"11\" fill=\"#64748b\">重叠电子层圆圈共用 1 对点叉电子</text>\n\n  <!-- Center Arrow: UV light -->\n  <rect x=\"292\" y=\"106\" width=\"76\" height=\"22\" rx=\"6\" fill=\"#fef3c7\" stroke=\"#f59e0b\"/>\n  <text x=\"330\" y=\"121\" text-anchor=\"middle\" font-size=\"12.8\" font-weight=\"800\" fill=\"#b45309\">UV light</text>\n  <line x1=\"284\" y1=\"140\" x2=\"376\" y2=\"140\" stroke=\"#0f172a\" stroke-width=\"2.4\"/>\n  <polygon points=\"376,140 366,134 366,146\" fill=\"#0f172a\"/>\n  <text x=\"330\" y=\"159\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"700\" fill=\"#475569\">homolytic fission</text>\n  <text x=\"330\" y=\"175\" text-anchor=\"middle\" font-size=\"11\" fill=\"#64748b\">（共价键均裂）</text>\n\n  <!-- Right Card: Cl• + Cl× split radicals -->\n  <rect x=\"388\" y=\"52\" width=\"376\" height=\"180\" rx=\"10\" fill=\"#ffffff\" stroke=\"#86efac\" stroke-width=\"1.5\"/>\n  <!-- Radical 1: 7 dots -->\n  <circle cx=\"476\" cy=\"126\" r=\"43\" fill=\"none\" stroke=\"#1e293b\" stroke-width=\"1.9\"/>\n  <text x=\"476\" y=\"132\" text-anchor=\"middle\" font-size=\"16\" font-weight=\"800\" fill=\"#1e293b\">Cl</text>\n  <circle cx=\"469\" cy=\"91\" r=\"3.3\" fill=\"#1e293b\"/><circle cx=\"483\" cy=\"91\" r=\"3.3\" fill=\"#1e293b\"/>\n  <circle cx=\"441\" cy=\"119\" r=\"3.3\" fill=\"#1e293b\"/><circle cx=\"441\" cy=\"133\" r=\"3.3\" fill=\"#1e293b\"/>\n  <circle cx=\"469\" cy=\"161\" r=\"3.3\" fill=\"#1e293b\"/><circle cx=\"483\" cy=\"161\" r=\"3.3\" fill=\"#1e293b\"/>\n  <circle cx=\"511\" cy=\"126\" r=\"4.5\" fill=\"#dc2626\"/>\n  <circle cx=\"511\" cy=\"126\" r=\"8.5\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"1.2\" stroke-dasharray=\"2,2\"/>\n\n  <!-- Plus sign -->\n  <text x=\"576\" y=\"135\" text-anchor=\"middle\" font-size=\"24\" font-weight=\"800\" fill=\"#059669\">+</text>\n\n  <!-- Radical 2: 7 crosses -->\n  <circle cx=\"676\" cy=\"126\" r=\"43\" fill=\"none\" stroke=\"#0284c7\" stroke-width=\"1.9\"/>\n  <text x=\"676\" y=\"132\" text-anchor=\"middle\" font-size=\"16\" font-weight=\"800\" fill=\"#0369a1\">Cl</text>\n  <text x=\"669\" y=\"96\" text-anchor=\"middle\" font-size=\"13.5\" font-weight=\"800\" fill=\"#dc2626\">×</text>\n  <text x=\"683\" y=\"96\" text-anchor=\"middle\" font-size=\"13.5\" font-weight=\"800\" fill=\"#dc2626\">×</text>\n  <text x=\"711\" y=\"124\" text-anchor=\"middle\" font-size=\"13.5\" font-weight=\"800\" fill=\"#dc2626\">×</text>\n  <text x=\"711\" y=\"138\" text-anchor=\"middle\" font-size=\"13.5\" font-weight=\"800\" fill=\"#dc2626\">×</text>\n  <text x=\"669\" y=\"166\" text-anchor=\"middle\" font-size=\"13.5\" font-weight=\"800\" fill=\"#dc2626\">×</text>\n  <text x=\"683\" y=\"166\" text-anchor=\"middle\" font-size=\"13.5\" font-weight=\"800\" fill=\"#dc2626\">×</text>\n  <text x=\"641\" y=\"131\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"800\" fill=\"#dc2626\">×</text>\n  <circle cx=\"641\" cy=\"126\" r=\"8.5\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"1.2\" stroke-dasharray=\"2,2\"/>\n\n  <text x=\"576\" y=\"201\" text-anchor=\"middle\" font-size=\"12.3\" font-weight=\"800\" fill=\"#047857\">Two chlorine radicals（7 个 • + 7 个 ×，各含 1 个未成对电子 unpaired electron）</text>\n  <text x=\"576\" y=\"220\" text-anchor=\"middle\" font-size=\"11.2\" font-weight=\"700\" fill=\"#be123c\">⚠️ 点叉电子图中切勿合并写成系数 2，必须画成两个独立电子圈用 + 相加！</text>\n</svg>\n\n                <div class=\"b-scheme\" style=\"margin-top:8px;\">\n<pre>【Mechanism: Free radical substitution（自由基取代反应 —— 以 CH₄ + Cl₂ 为例）】\nStage 1: Initiation（链引发：0 自由基 ➔ 2 自由基，吸收紫外光均裂）\n         Cl—Cl   ──( UV light )──▶   Cl•   +   Cl•\n\nStage 2: Propagation（链增长 / 链传播：1 自由基进 ➔ 1 自由基出，再生 Cl• 维持连锁反应！）\n         CH₄    +   Cl•   ───▶   •CH₃    +   HCl       （•CH₃ = methyl radical 甲基自由基）\n         •CH₃   +   Cl₂   ───▶   CH₃Cl   +   Cl•       （⚠️ 绝不可错写成 •CH₃ + Cl• ⟶ CH₃Cl！）\n\nStage 3: Termination（链终止：任意 2 自由基结合 ➔ 0 自由基，连锁反应停止）\n         Cl•    +   Cl•   ───▶   Cl₂\n         •CH₃   +   Cl•   ───▶   CH₃Cl\n         •CH₃   +   •CH₃  ───▶   CH₃CH₃               （副产微量乙烷 trace ethane —— 自由基机理铁证！）</pre>\n                </div>\n                ", "start": 173.198, "end": 352.966}, {"id": "b1_3", "tag": "板书 3 · 多取代链与产率调控 (27.2C)", "title": "为什么产物总是混合物？多氯代链条与反应物过量比例调控", "html": "\n                <div class=\"b-eq\">CH<sub>4</sub> &nbsp;──(Cl<sub>2</sub>, UV light)──▶&nbsp; <strong>CH<sub>3</sub>Cl</strong> &nbsp;⟶&nbsp; <strong>CH<sub>2</sub>Cl<sub>2</sub></strong> &nbsp;⟶&nbsp; <strong>CHCl<sub>3</sub></strong> &nbsp;⟶&nbsp; <strong>CCl<sub>4</sub></strong> &nbsp;（每步均脱去 HCl）</div>\n                <table class=\"b-mini-table\">\n                  <thead>\n                    <tr>\n                      <th>目标主要有机产物（Desired Major Product）</th>\n                      <th>应调配的反应物比例（Condition）</th>\n                      <th>考评局微观碰撞解释（Exam Explanation）</th>\n                    </tr>\n                  </thead>\n                  <tbody>\n                    <tr>\n                      <td>一氯甲烷 <strong><code>chloromethane (CH₃Cl)</code></strong></td>\n                      <td>使用<strong>过量甲烷 <code>excess methane (CH₄)</code></strong><br>（高 <code>CH₄ : Cl₂</code> 摩尔比）</td>\n                      <td>氯自由基 <code>Cl•</code> 撞击大量 <code>CH₄</code> 分子的几率远高于撞击刚生成的少量 <code>CH₃Cl</code>，从而抑制进一步多取代。</td>\n                    </tr>\n                    <tr>\n                      <td>四氯甲烷 <strong><code>tetrachloromethane (CCl₄)</code></strong></td>\n                      <td>使用<strong>过量氯气 <code>excess chlorine (Cl₂)</code></strong><br>（高 <code>Cl₂ : CH₄</code> 摩尔比）</td>\n                      <td>充足的氯自由基将甲烷及中间氯代物上的全部 4 个 H 原子彻底取代为 Cl 原子。</td>\n                    </tr>\n                  </tbody>\n                </table>\n                <div class=\"b-note\" style=\"margin-top:8px;\">📌 <strong>全名速认</strong>：<code>CH₃Cl</code> chloromethane ｜ <code>CH₂Cl₂</code> dichloromethane ｜ <code>CHCl₃</code> trichloromethane ｜ <code>CCl₄</code> tetrachloromethane。</div>\n                ", "start": 353.586, "end": 460.366}], "turns": [{"speaker": "teacher", "role": "concept", "stepTag": "🎯 单元导学 · 饱和烷烃为什么室温下刀枪不入？", "boardId": "b1_1", "displayHtml": "同学们好，欢迎来到精工版《Mastering Chemistry》Book 3A · Topic 7 核心重头戏——<strong>Unit 27：<em>Alkanes and alkenes</em>（烷烃与烯烃）</strong>。请看<strong>第 1 张板书</strong>：烷烃属只含单键的 <strong>saturated hydrocarbons（饱和碳氢化合物）</strong>，室温下不与酸、碱或强氧化剂反应，微观原因有二：① <code>C—C</code> 与 <code>C—H</code> <strong>单共价键极牢固（strong single covalent bonds）</strong>；② 共价键<strong>几乎非极性（almost non-polar）</strong>，没有正负电中心吸引带电试剂。", "start": 0.25, "end": 57.418}, {"speaker": "teacher", "role": "concept", "stepTag": "🔥 燃烧反应 · 完全燃烧蓝焰与不完全燃烧黑烟", "boardId": "b1_1", "displayHtml": "唤醒烷烃的第一条路是燃烧！看板书左框：在<strong>氧气充足（<code>plentiful supply of oxygen</code>）</strong>时发生 <strong>complete combustion（完全燃烧）</strong>，生成 <code>CO₂</code> 和 <code>H₂O</code> 并放热，短链烷烃呈干净蓝色火焰；若<strong>氧气不足（<code>limited supply of oxygen</code>）</strong>则发生 <strong>incomplete combustion（不完全燃烧）</strong>，产生剧毒 <strong><code>CO(g)</code></strong> 与黑色碳粒 <strong><code>carbon particulates / soot, C(s)</code></strong>，呈明亮黄焰并冒黑烟。", "start": 57.758, "end": 115.646}, {"speaker": "teacher", "role": "example", "stepTag": "🧪 必考现象 · 紫外光下溴溶液缓慢褪色与酸雾", "boardId": "b1_1", "displayHtml": "第二条路是 <code>27.2</code> 节与卤素的取代反应！看板书右框：将己烷（<code>hexane</code>）与 <code>Br₂ (in organic solvent)</code> 混合，在<strong>黑暗中（<code>in the dark</code>）无明显变化（<code>no observable change</code>）</strong>；但在 <strong><code>UV light</code> / <code>sunlight</code></strong> 照射下会出现两大必考现象：① 红棕/橙色溶液<strong>缓慢褪色（<code>decolorizes slowly</code>）</strong>；② 试管口产生 <strong><code>HBr(g)</code> 白雾（<code>misty fumes</code>，使湿润蓝石蕊试纸变红）</strong>！", "start": 115.986, "end": 172.578}, {"speaker": "teacher", "role": "concept", "stepTag": "⚡ 链引发电子图 · 精工版四大红线与共价键均裂", "boardId": "b1_2", "displayHtml": "切换到<strong>第 2 张板书</strong>拆解核心机理——<strong>Free radical substitution（自由基取代反应）</strong>！盯紧上方 <strong><code>Initiation</code>（链引发）电子图</strong>：<code>Cl₂</code> 吸收 <strong><code>UV light</code></strong> 发生<strong>均裂（<code>homolytic fission</code>）</strong>生成氯自由基。作图死守精工四铁律：① <strong>只画最外层电子（<code>outermost shells only</code>）</strong>；② 箭头上方必写 <code>UV light</code>（<strong>严禁写超纲符号，严禁画大学鱼钩弯箭头</strong>）；③ 重叠圆圈共用一对点叉；④ 右侧两个氯自由基点叉不同（7<code>•</code> 与 7<code>×</code>，各含 1 个 <code>unpaired electron</code>），<strong>必须用 <code>+</code> 号拆开相加，绝不合并写系数 2</strong>！", "start": 173.198, "end": 238.742}, {"speaker": "teacher", "role": "concept", "stepTag": "🔄 链增长两步 · 抢氢造甲基自由基与氯自由基再生", "boardId": "b1_2", "displayHtml": "再看板书深色框的 <strong>Stage 2: <code>Propagation</code>（链增长）</strong>两步循环：① 氯自由基 <code>Cl•</code> 夺取 <code>CH₄</code> 的一个 H 生成 <code>HCl</code> 与<strong>甲基自由基（<code>methyl radical, •CH₃</code>）</strong>；② <code>•CH₃</code> 随即撞击另一分子 <code>Cl₂</code>，生成<strong>一氯甲烷（<code>chloromethane, CH₃Cl</code>）</strong>并<strong>再生新的 <code>Cl•</code></strong>！每一步都是“1 个自由基进 ➔ 1 个自由基出”，使连锁反应（<code>chain reaction</code>）生生不息。", "start": 239.082, "end": 292.362}, {"speaker": "teacher", "role": "trap", "stepTag": "⚠️ 链终止与考官陷阱 · 微量乙烷从哪儿冒出来的？", "boardId": "b1_2", "displayHtml": "再看最底下的 <strong>Stage 3: <code>Termination</code>（链终止）</strong>：任意两个自由基结合成稳定分子（2 自由基 ➔ 0 自由基），共 3 条式子。牢记两大高频考点：① <strong>切勿把 <code>•CH₃ + Cl• ⟶ CH₃Cl</code> 错写进 <code>Propagation</code></strong>（它不再生自由基，属链终止！）；② 产物中检出<strong>微量乙烷（<code>trace amount of ethane, CH₃CH₃</code>）</strong>，正是由两个 <code>•CH₃</code> 在 <code>Termination</code> 阶段结合生成的铁证！", "start": 292.702, "end": 352.966}, {"speaker": "teacher", "role": "concept", "stepTag": "⛓️ 连续多取代 · 从一氯甲烷一路杀到四氯甲烷", "boardId": "b1_3", "displayHtml": "移步<strong>第 3 张板书</strong>看连续多取代链条！生成的 <code>CH₃Cl</code> 仍含 <code>C—H</code> 键，会继续被 <code>Cl•</code> 进攻，依次取代生成 <strong><code>CH₂Cl₂</code>（dichloromethane）</strong> ➔ <strong><code>CHCl₃</code>（trichloromethane）</strong> ➔ <strong><code>CCl₄</code>（tetrachloromethane）</strong>。因此自由基取代反应必然产生多种卤代烷的混合物。", "start": 353.586, "end": 410.514}, {"speaker": "teacher", "role": "summary", "stepTag": "🎛️ 产率调控总结 · 谁过量谁决定主产物走向", "boardId": "b1_3", "displayHtml": "如何调控主要有机产物？看板书表格：① 想主产 <strong><code>chloromethane (CH₃Cl)</code></strong> ➔ 用<strong>过量甲烷（<code>excess methane</code>）</strong>，提高 <code>Cl•</code> 碰撞 <code>CH₄</code> 的几率以抑制多取代；② 想主产 <strong><code>tetrachloromethane (CCl₄)</code></strong> ➔ 用<strong>过量氯气（<code>excess chlorine</code>）</strong>，将 4 个 H 彻底换光！下一讲进军炼油厂，攻克石油馏分裂化（<code>cracking</code>）与实验室防倒吸铁律！", "start": 410.854, "end": 460.366}], "quickChecks": [{"q": "在甲烷（CH₄）与氯气（Cl₂）于紫外光（UV light）下的自由基取代机理中，下列哪一步属于链增长阶段（Propagation step）？", "options": ["A. Cl₂ ⟶ Cl• + Cl• （在 UV light 下）", "B. •CH₃ + Cl• ⟶ CH₃Cl", "C. •CH₃ + Cl₂ ⟶ CH₃Cl + Cl•", "D. •CH₃ + •CH₃ ⟶ CH₃CH₃"], "ans": 2, "exp": "A 属于链引发（Initiation）；B 与 D 均为两个自由基结合消灭自由基的链终止（Termination）；只有 C（•CH₃ + Cl₂ ⟶ CH₃Cl + Cl•）在生成 CH₃Cl 的同时再生氯自由基 Cl•，维持连锁反应，属链增长（Propagation）！"}, {"q": "把己烷（hexane）与溶于有机溶剂的溴（Br₂ in organic solvent）混合并置于阳光（sunlight）下，可观察到什么现象？", "options": ["A. 黑暗与阳光下均瞬间褪为无色，且无白雾", "B. 红棕色/橙色溶液缓慢褪色（decolorizes slowly），并在管口产生 HBr 白雾（misty fumes）", "C. 溶液由橙色变为绿色（orange to green）", "D. 溶液保持红棕色不变，无任何反应发生"], "ans": 1, "exp": "己烷在阳光/紫外光（UV light）下与溴发生自由基取代反应：红棕/橙色溴溶液缓慢褪色（decolorizes slowly），同时脱出的溴化氢气体 HBr(g) 遇空气中水汽在管口形成白雾（misty fumes）。"}], "duration": 460.87, "audioFile": "audio/01_27.1-27.2_烷烃不活泼性燃烧与紫外光自由基取代机理.mp3", "fullStart": 0.0, "fullEnd": 460.82}, {"id": "ep2", "epNum": "第 2 讲", "code": "27.3", "fileSlug": "02_27.3_石油馏分裂化工业价值配平与实验室防倒吸", "titleZh": "石油馏分的裂化（Cracking）：解决汽油供求失衡与实验室防倒吸铁律", "titleEn": "Industrial & Lab Cracking of Petroleum Fractions and Anti-Sucking-Back Safety", "goal": "理解裂化（cracking）在隔绝空气（in the absence of air）下打断共价键的化学本质与两大经济原因，掌握长链烷烃裂化方程式配平规律，吃透实验室裂化药用石蜡油装置及“先撤导气管后停火”防倒吸（sucking back）铁律。", "keyTerms": [{"en": "cracking (in the absence of air)", "zh": "裂化（隔绝空气下断键）"}, {"en": "surplus heavy fractions / extra petrol", "zh": "过剩重馏分 / 额外汽油"}, {"en": "thermal vs catalytic cracking", "zh": "热裂化 vs 催化裂化 (zeolite / Al₂O₃)"}, {"en": "medicinal paraffin", "zh": "药用石蜡油"}, {"en": "broken porous pot / unglazed porcelain", "zh": "碎素瓷片 / 无釉瓷片（催化剂）"}, {"en": "sucking back", "zh": "倒吸（冷水倒吸炸裂热试管）"}], "boards": [{"id": "b2_1", "tag": "板书 1 · 裂化定义与经济原因 (27.3A)", "title": "什么是裂化（Cracking）？必背两大工业经济原因与催化裂化优势", "html": "\n                <div class=\"b-quote\">\n                  <div class=\"b-quote-en\"><strong>Cracking（裂化）</strong> = Breaking down larger hydrocarbon molecules into smaller ones by heat and/or a catalyst <strong>in the absence of air（隔绝空气）</strong>.</div>\n                  <div class=\"b-quote-zh\">💡 <strong>本质辨析</strong>：分馏是物理分离；裂化是打断强 <code>C—C</code> / <code>C—H</code> 共价键的<strong>化学变化</strong>！<strong>必须隔绝空气</strong>，否则碳氢化合物在高温下会直接燃烧甚至爆炸！</div>\n                </div>\n                <div class=\"board-grid-2\">\n                  <div class=\"b-box b-amber\">\n                    <div class=\"b-box-title\">① HKDSE 必背两大经济原因（2 Marks）</div>\n                    <ul class=\"b-points\">\n                      <li><strong>补足汽油缺口</strong>：将原油分馏过剩的重质馏分（<strong><code>surplus heavy fractions</code></strong>）转化为市场高需求的额外汽油（<strong><code>extra petrol</code></strong>）。</li>\n                      <li><strong>制造石化原料</strong>：生产原油中本不存在的<strong>烯烃（<code>alkenes</code>，如 ethene）</strong>，作为制造塑料等石化工业产品的关键原料（feedstocks）。</li>\n                    </ul>\n                  </div>\n                  <div class=\"b-box b-teal\">\n                    <div class=\"b-box-title\">② 热裂化 vs 催化裂化（现代炼厂主流）</div>\n                    <ul class=\"b-points\">\n                      <li><strong><code>Thermal cracking</code>（热裂化）</strong>：<code>~700°C</code>、高压 <code>30–70 atm</code>，无催化剂（产较多短链烯烃）。</li>\n                      <li><strong><code>Catalytic cracking</code>（催化裂化）</strong>：较低温 <code>~500°C</code>、近常压，用 <strong><code>zeolite / Al₂O₃ / SiO₂</code></strong> 作催化剂 ➔ 省能源、免高压设备，且多产优质抗爆震的<strong>支链烷烃（<code>branched-chain alkanes</code>）</strong>！</li>\n                    </ul>\n                  </div>\n                </div>\n                ", "start": 0.25, "end": 149.106}, {"id": "b2_2", "tag": "板书 2 · 裂化方程式配平 (27.3B)", "title": "一秒配平裂化方程式：为什么一分子烷烃绝不可能只裂化成两个烷烃？", "html": "\n                <div class=\"b-scheme\">\n<pre>【黄金配平通式】 1 分子长链烷烃 (CₙH₂ₙ₊₂)  ──▶  1 分子较短链烷烃  +  1 分子或多分子烯烃 (CₘH₂ₘ)\n\n  例 1（癸烷裂化）：   C₁₀H₂₂(l)  ──(Al₂O₃, heat)──▶  C₈H₁₈(l)  +  C₂H₄(g)          [C: 8+2=10 | H: 18+4=22 ✅]\n  例 2（十四烷裂化）： C₁₄H₃₀(l)  ──(catalyst, heat)─▶  C₈H₁₈(l)  +  3C₂H₄(g)        [C: 8+6=14 | H: 18+12=30 ✅]\n  例 3（随机断键混合）：C₁₂H₂₆(l)  ──(catalyst, heat)─▶  C₆H₁₄(l)  +  C₄H₈(g) + C₂H₄(g) [C: 6+4+2=12 | H: 14+8+4=26 ✅]\n\n【❌ 考场死穴警示】 绝不可能只生成两个饱和烷烃！\n  错例：C₁₀H₂₂ ⟶ C₆H₁₄ + C₄H₁₀  ❌ （右边 H 总数 = 14 + 10 = 24 ＞ 左边 22，凭空多了 2 个氢原子！）</pre>\n                </div>\n                <div class=\"b-note\">📌 <strong>补充情形</strong>：极少数短链裂化亦可脱氢生成烯烃与氢气（如 <code>C₂H₆ ⟶ C₂H₄ + H₂</code>），总之只要严查左右两侧 <strong>C、H 原子总数守恒</strong> 就绝不会出错！</div>\n                ", "start": 149.726, "end": 254.658}, {"id": "b2_3", "tag": "板书 3 · 实验室裂化与防倒吸 (27.3C)", "title": "学校实验室催化裂化药用石蜡油装置与防倒吸（Anti-Sucking-Back）生死线", "html": "\n<svg class=\"board-svg\" viewBox=\"0 0 780 240\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"学校实验室催化裂化药用石蜡油标准装置与三大必考要点\">\n  <defs>\n    <linearGradient id=\"u27CrackBg\" x1=\"0\" y1=\"0\" x2=\"1\" y2=\"1\">\n      <stop offset=\"0%\" stop-color=\"#f8fafc\"/>\n      <stop offset=\"100%\" stop-color=\"#ecfdf5\"/>\n    </linearGradient>\n  </defs>\n  <rect x=\"0\" y=\"0\" width=\"780\" height=\"240\" rx=\"12\" fill=\"url(#u27CrackBg)\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/>\n  <text x=\"256\" y=\"24\" text-anchor=\"middle\" font-size=\"13.8\" font-weight=\"800\" fill=\"#0f172a\">实验室催化裂化药用石蜡油装置（Catalytic Cracking of Medicinal Paraffin）</text>\n\n  <!-- Horizontal Boiling Tube -->\n  <rect x=\"26\" y=\"88\" width=\"234\" height=\"40\" rx=\"16\" fill=\"#ffffff\" stroke=\"#334155\" stroke-width=\"2.3\"/>\n  <!-- Mineral wool + medicinal paraffin -->\n  <rect x=\"34\" y=\"94\" width=\"52\" height=\"28\" rx=\"9\" fill=\"#fde68a\" stroke=\"#d97706\" stroke-width=\"1.4\"/>\n  <line x1=\"60\" y1=\"94\" x2=\"68\" y2=\"70\" stroke=\"#b45309\" stroke-width=\"1.2\"/>\n  <text x=\"76\" y=\"51\" text-anchor=\"middle\" font-size=\"11.3\" font-weight=\"700\" fill=\"#92400e\">Mineral wool 矿渣棉</text>\n  <text x=\"76\" y=\"66\" text-anchor=\"middle\" font-size=\"10.8\" fill=\"#b45309\">+ medicinal paraffin 石蜡油</text>\n\n  <!-- Broken porous pot / unglazed porcelain / Al2O3 -->\n  <polygon points=\"148,122 160,103 174,122\" fill=\"#cbd5e1\" stroke=\"#475569\" stroke-width=\"1.2\"/>\n  <polygon points=\"170,122 185,99 200,122\" fill=\"#94a3b8\" stroke=\"#475569\" stroke-width=\"1.2\"/>\n  <polygon points=\"195,122 208,104 221,122\" fill=\"#cbd5e1\" stroke=\"#475569\" stroke-width=\"1.2\"/>\n  <line x1=\"185\" y1=\"99\" x2=\"195\" y2=\"70\" stroke=\"#334155\" stroke-width=\"1.2\"/>\n  <text x=\"206\" y=\"51\" text-anchor=\"middle\" font-size=\"11.3\" font-weight=\"800\" fill=\"#0f172a\">Broken porous pot 碎素瓷片</text>\n  <text x=\"206\" y=\"66\" text-anchor=\"middle\" font-size=\"10.8\" fill=\"#475569\">/ unglazed porcelain / Al₂O₃</text>\n\n  <!-- Bunsen Flame under catalyst -->\n  <path d=\"M171,162 Q185,130 199,162 Z\" fill=\"#ef4444\"/>\n  <path d=\"M177,162 Q185,140 193,162 Z\" fill=\"#facc15\"/>\n  <rect x=\"179\" y=\"162\" width=\"12\" height=\"36\" rx=\"2\" fill=\"#64748b\"/>\n  <rect x=\"167\" y=\"196\" width=\"36\" height=\"6\" rx=\"3\" fill=\"#475569\"/>\n  <text x=\"185\" y=\"216\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"800\" fill=\"#dc2626\">🔥 Strong heat 强热催化剂</text>\n  <text x=\"185\" y=\"231\" text-anchor=\"middle\" font-size=\"10.3\" fill=\"#64748b\">（间歇轻掠加热石蜡油使其气化通过热瓷片）</text>\n\n  <!-- Stopper & Delivery Tube -->\n  <rect x=\"254\" y=\"93\" width=\"14\" height=\"30\" rx=\"2\" fill=\"#475569\"/>\n  <path d=\"M268,108 L340,108 L382,196 L426,196\" fill=\"none\" stroke=\"#334155\" stroke-width=\"4.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n  <path d=\"M268,108 L340,108 L382,196 L426,196\" fill=\"none\" stroke=\"#ffffff\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n\n  <!-- Water Trough & Inverted Test Tube -->\n  <rect x=\"354\" y=\"148\" width=\"136\" height=\"68\" rx=\"6\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"1.8\"/>\n  <rect x=\"406\" y=\"54\" width=\"42\" height=\"150\" rx=\"16\" fill=\"#e0f2fe\" stroke=\"#1e293b\" stroke-width=\"1.8\"/>\n  <rect x=\"408\" y=\"56\" width=\"38\" height=\"72\" rx=\"14\" fill=\"#ffffff\"/>\n  <circle cx=\"427\" cy=\"184\" r=\"3.5\" fill=\"#ffffff\" stroke=\"#0284c7\"/>\n  <circle cx=\"424\" cy=\"162\" r=\"4.2\" fill=\"#ffffff\" stroke=\"#0284c7\"/>\n  <circle cx=\"430\" cy=\"141\" r=\"3.5\" fill=\"#ffffff\" stroke=\"#0284c7\"/>\n  <text x=\"427\" y=\"86\" text-anchor=\"middle\" font-size=\"10.8\" font-weight=\"800\" fill=\"#047857\">Gaseous</text>\n  <text x=\"427\" y=\"100\" text-anchor=\"middle\" font-size=\"10.8\" font-weight=\"800\" fill=\"#047857\">alkenes</text>\n  <text x=\"427\" y=\"114\" text-anchor=\"middle\" font-size=\"10\" fill=\"#059669\">(C₂H₄ 等)</text>\n  <text x=\"422\" y=\"231\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"700\" fill=\"#1d4ed8\">排水法收集（Over water）</text>\n\n  <!-- Right Exam Card: 3 Classic Questions -->\n  <rect x=\"506\" y=\"18\" width=\"258\" height=\"206\" rx=\"10\" fill=\"#ffffff\" stroke=\"#fda4af\" stroke-width=\"1.6\"/>\n  <rect x=\"506\" y=\"18\" width=\"258\" height=\"28\" rx=\"10\" fill=\"#ffe4e6\"/>\n  <text x=\"635\" y=\"37\" text-anchor=\"middle\" font-size=\"12.5\" font-weight=\"800\" fill=\"#be123c\">🎯 HKDSE 必考三大设问满分卡</text>\n\n  <text x=\"518\" y=\"64\" font-size=\"11.5\" font-weight=\"800\" fill=\"#0f172a\">① 碎素瓷片 / Al₂O₃ 的作用：</text>\n  <text x=\"518\" y=\"80\" font-size=\"11\" fill=\"#334155\">充当催化剂（catalyst）并提供炽热大表面积。</text>\n\n  <text x=\"518\" y=\"103\" font-size=\"11.5\" font-weight=\"800\" fill=\"#0f172a\">② 为什么弃去收集的第一支试管气体？</text>\n  <text x=\"518\" y=\"119\" font-size=\"11\" fill=\"#334155\">主要是受热排出的空气（mainly displaced air）。</text>\n\n  <rect x=\"516\" y=\"132\" width=\"238\" height=\"82\" rx=\"8\" fill=\"#fff1f2\" stroke=\"#fb7185\" stroke-width=\"1.2\"/>\n  <text x=\"525\" y=\"150\" font-size=\"11.5\" font-weight=\"800\" fill=\"#be123c\">③ 头号安全红线（防倒吸 Sucking back）：</text>\n  <text x=\"525\" y=\"167\" font-size=\"11\" font-weight=\"800\" fill=\"#9f1239\">Remove delivery tube from water</text>\n  <text x=\"525\" y=\"182\" font-size=\"11\" font-weight=\"800\" fill=\"#9f1239\">BEFORE stopping heating!</text>\n  <text x=\"525\" y=\"201\" font-size=\"10.6\" fill=\"#881337\">先撤导管后停火，防冷水倒吸炸裂滚烫大试管！</text>\n</svg>\n", "start": 255.278, "end": 415.678}], "turns": [{"speaker": "teacher", "role": "concept", "stepTag": "🥖 裂化本质 · 隔绝空气下的共价键裁剪术", "boardId": "b2_1", "displayHtml": "欢迎来到第 2 讲！原油分馏只是物理分离，而 <code>27.3</code> 节的 <strong>cracking（裂化）</strong>是在<strong>隔绝空气（<code>in the absence of air</code>）</strong>下，利用高温及/或催化剂打断共价键、把大分子烃拆成小分子的<strong>化学变化</strong>！牢记必写 <strong><code>in the absence of air</code></strong>——高温下若有空气，碳氢化合物会直接燃烧甚至爆炸！", "start": 0.25, "end": 48.274}, {"speaker": "teacher", "role": "concept", "stepTag": "💰 两大经济原因 · 额外汽油与石化原料双子星", "boardId": "b2_1", "displayHtml": "炼油厂为什么要裂化？死磕板书左框的<strong>两大必背经济原因（2M）</strong>：① 将供过于求的过剩重质馏分（<strong><code>surplus heavy fractions</code></strong>）转化为市场极度紧缺的<strong>额外汽油（<code>extra petrol</code>）</strong>；② 生产原油中原本没有的<strong>烯烃（<code>alkenes</code>，如 <code>ethene</code>）</strong>，作为制造塑料等石化工业不可或缺的原料（<code>petrochemical feedstocks</code>）！", "start": 48.614, "end": 100.046}, {"speaker": "teacher", "role": "concept", "stepTag": "⚙️ 工艺进化 · 热裂化与现代沸石催化裂化", "boardId": "b2_1", "displayHtml": "再看板书右框对比两套工艺：<strong><code>Thermal cracking</code>（热裂化）</strong>需 <code>~700°C</code> 及 <code>30–70 atm</code> 高压；而现代主流 <strong><code>Catalytic cracking</code>（催化裂化）</strong>采用 <strong><code>zeolite / Al₂O₃ / SiO₂</code></strong> 作催化剂，仅需 <code>~500°C</code> 及近常压，不仅大幅节省能源与高压设备成本，还能多产抗爆震更佳的<strong>支链烷烃（<code>branched-chain alkanes</code>）</strong>优质汽油！", "start": 100.386, "end": 149.106}, {"speaker": "teacher", "role": "example", "stepTag": "🧮 方程式配平 · 一烷配多烯的守恒密码", "boardId": "b2_2", "displayHtml": "切到<strong>第 2 张板书</strong>演练配平黄金通式：<strong>1 分子长链烷烃 ⟶ 1 分子较短烷烃 + 1 或多分子烯烃</strong>！看例 1：<code>C₁₀H₂₂ ⟶ C₈H₁₈ + C₂H₄</code>（C、H 完全守恒）；再看例 2 高频题：若 <code>C₁₄H₃₀</code> 裂化生成 <code>C₈H₁₈</code> 且乙烯是唯一烯烃产物，剩余 6 个碳正好配系数 3 得 <strong><code>C₁₄H₃₀ ⟶ C₈H₁₈ + 3C₂H₄</code></strong>！", "start": 149.726, "end": 204.734}, {"speaker": "teacher", "role": "trap", "stepTag": "⚠️ 配平死穴 · 为什么绝不可能裂化成两个饱和烷烃？", "boardId": "b2_2", "displayHtml": "盯紧板书下方的<strong>考场死穴</strong>：一分子烷烃裂化，<strong>绝对不可能只生成两个饱和烷烃</strong>！例如错写成 <em><code>C₁₀H₂₂ ⟶ C₆H₁₄ + C₄H₁₀</code></em>，右侧氢原子数 <code>14 + 10 = 24 &gt; 22</code>，凭空多出 2 个 H！因为氢原子不足，断裂产物中<strong>必然包含不饱和的烯烃（<code>alkenes</code>）</strong>（或极少数脱氢生成烯烃与 <code>H₂</code>）。", "start": 205.074, "end": 254.658}, {"speaker": "teacher", "role": "concept", "stepTag": "🔬 实验室装置 · 矿渣棉与强热碎素瓷片的分工", "boardId": "b2_3", "displayHtml": "进入<strong>第 3 张板书</strong>剖析实验室装置！水平大试管左端封闭处放置吸有<strong>药用石蜡油（<code>medicinal paraffin</code>）</strong>的<strong>矿渣棉（<code>mineral wool</code>）</strong>以固定液态石蜡；试管中部放置<strong>碎素瓷片（<code>broken porous pot</code> / <code>unglazed porcelain</code> / <code>Al₂O₃</code>）</strong>并用本生灯直接强热——它既作<strong>催化剂（<code>catalyst</code>）</strong>又提供巨大受热表面积，石蜡蒸气越过热瓷片即裂化！", "start": 255.278, "end": 309.758}, {"speaker": "teacher", "role": "example", "stepTag": "🫧 排水法细节 · 为什么第一支试管气体必须丢弃？", "boardId": "b2_3", "displayHtml": "顺导管看右侧水槽：裂化生成的短链烯烃（如 <code>ethene</code>）分子极小、分子间 <code>van der Waals' forces</code> 极弱故呈气态，且<strong>不溶于水、不与水反应</strong>，可用排水法收集。必背设问 ②：<strong>为什么弃去收集的第一支试管气体？</strong>标准答案：因为它<strong>主要是受热装置内膨胀排出的空气（<code>mainly air displaced from the boiling tube</code>）</strong>！", "start": 310.098, "end": 359.034}, {"speaker": "teacher", "role": "trap", "stepTag": "🚨 头号安全红线 · 先撤导管后停火严防冷水倒吸！", "boardId": "b2_3", "displayHtml": "死守板书右下方<strong>头号安全红线（2M）</strong>：实验结束时，<strong>必须先把导气管移出水面，再停止加热（<code>Remove the delivery tube from the water BEFORE stopping heating</code>）</strong>！若先停火，大试管内热气体冷却收缩导致气压骤降，水槽中的冷水会发生<strong>倒吸（<code>sucking back</code>）</strong>涌入滚烫的玻璃大试管，令试管骤冷炸裂！下一讲解锁烯烃四大加成反应！", "start": 359.374, "end": 415.678}], "quickChecks": [{"q": "十四烷（C₁₄H₃₀）在催化裂化中生成一分子辛烷（C₈H₁₈）、一分子丙烯（C₃H₆）及一分子碳氢化合物 X。X 的分子式是什么？", "options": ["A. C₃H₈", "B. C₃H₆", "C. C₆H₁₂", "D. C₄H₈"], "ans": 1, "exp": "根据原子守恒：X 的碳原子数 = 14 − 8 − 3 = 3；氢原子数 = 30 − 18 − 6 = 6，故 X 为 C₃H₆（另一分子丙烯，即 C₁₄H₃₀ ⟶ C₈H₁₈ + 2C₃H₆）。切勿误选 C₃H₈（否则总氢数变为 32 > 30）！"}, {"q": "在实验室催化裂化药用石蜡油并排水收集气体的实验结束时，下列哪项安全操作及解释完全正确？", "options": ["A. 先熄灭本生灯，待试管冷却后再把导气管移出水面，以防烫伤", "B. 先把导气管移出水面再停止加热，防止冷水倒吸（sucking back）导致热大试管炸裂", "C. 保留第一支收集到的试管气体，因为其中乙烯纯度最高", "D. 向大试管内鼓入空气，加速石蜡油完全裂化"], "ans": 1, "exp": "必须先将导气管移出水面再停止加热（Remove the delivery tube from the water before stopping heating），防止大试管内气体冷却减压引起冷水倒吸（sucking back）炸裂热试管！"}], "duration": 416.18, "audioFile": "audio/02_27.3_石油馏分裂化工业价值配平与实验室防倒吸.mp3", "fullStart": 462.32, "fullEnd": 878.44}, {"id": "ep3", "epNum": "第 3 讲", "code": "27.4", "fileSlug": "03_27.4_烯烃不饱和双键四大加成反应与溴水头号陷阱", "titleZh": "烯烃（Alkenes）不饱和双键与四大加成反应（死磕溴水 Br₂(aq) 头号陷阱！）", "titleEn": "Unsaturated Alkenes, Addition Reactions & The Aqueous Bromine Trap", "goal": "理解烯烃不饱和碳碳双键（C=C）结构与燃烧浓黑烟成因，全面掌握催化加氢、有机溶剂溴加成、溴水（Br₂(aq)）主产 2-溴乙醇（2-bromoethanol）及冷稀酸化高锰酸钾生成二醇（diol）的四大加成反应与颜色表述红线。", "keyTerms": [{"en": "unsaturated hydrocarbon (C=C)", "zh": "不饱和碳氢化合物（碳碳双键）"}, {"en": "percentage by mass of carbon", "zh": "碳质量百分比（决定黑烟浓淡）"}, {"en": "addition reaction", "zh": "加成反应（合二为一成单一分子）"}, {"en": "catalytic hydrogenation", "zh": "催化加氢（硬化植物油造人造牛油）"}, {"en": "2-bromoethanol (bromoalkanol)", "zh": "2-溴乙醇（乙烯 + 溴水主产物！）"}, {"en": "diol (e.g. ethane-1,2-diol)", "zh": "二醇（紫色酸化 KMnO₄ 褪为无色）"}], "boards": [{"id": "b3_1", "tag": "板书 1 · 双键特性与催化加氢 (27.4A)", "title": "不饱和碳碳双键（C=C）、燃烧黑烟采分链与反应 ① 催化加氢", "html": "\n                <div class=\"b-quote\">\n                  <div class=\"b-quote-en\"><strong>Alkenes（烯烃，通式 C<sub>n</sub>H<sub>2n</sub>, n ≥ 2）</strong> are <strong>unsaturated hydrocarbons</strong> with a <strong><code>C=C</code> double bond</strong>. <strong>Addition reaction（加成反应）</strong>: two or more molecules combine to form <strong>a single larger molecule</strong> without losing any small molecules.</div>\n                  <div class=\"b-quote-zh\">💡 <strong>电子图提醒</strong>：乙烯 <code>C₂H₄</code> 两颗碳重叠圆圈中间必须画 <strong>2 对共用电子（共 4 颗电子）</strong>，且只画最外层电子！</div>\n                </div>\n                <div class=\"board-grid-2\">\n                  <div class=\"b-box b-amber\">\n                    <div class=\"b-box-title\">🕯️ 为什么同碳数烯烃燃烧黑烟更浓？（2M 模板）</div>\n                    <ul class=\"b-points\">\n                      <li>对比 <code>ethene (C₂H₄, 85.7% C)</code> vs <code>ethane (C₂H₆, 80.0% C)</code>：</li>\n                      <li><strong>1M</strong>：烯烃的<strong>碳质量百分比更高（<code>higher percentage by mass of carbon</code>）</strong>；</li>\n                      <li><strong>1M</strong>：更易发生<strong>不完全燃烧（<code>incomplete combustion</code>）</strong>生成<strong>碳粒黑烟（<code>carbon particulates / soot</code>）</strong>，火焰更明亮多烟！</li>\n                    </ul>\n                  </div>\n                  <div class=\"b-box b-teal\">\n                    <div class=\"b-box-title\">① 催化加氢 Catalytic Hydrogenation</div>\n                    <div class=\"b-eq\">CH<sub>2</sub>=CH<sub>2</sub>(g) + H<sub>2</sub>(g) &nbsp;──(<strong>Pt / Pd</strong> 或 <strong>Ni, heat</strong>)──▶&nbsp; CH<sub>3</sub>CH<sub>3</sub>(g)</div>\n                    <ul class=\"b-points\">\n                      <li><code>Pt</code> / <code>Pd</code> 室温即可催化；廉价 <code>Ni</code> 催化剂需加热（~150°C）。</li>\n                      <li><strong>工业应用</strong>：将液态不饱和植物油（vegetable oils）加氢硬化制造<strong>人造牛油（<code>margarine</code>）</strong>。</li>\n                    </ul>\n                  </div>\n                </div>\n                ", "start": 0.25, "end": 157.746}, {"id": "b3_2", "tag": "板书 2 · 溴水头号陷阱对比 (27.4B)", "title": "HKDSE 头号加成陷阱：Br₂ (in organic solvent) vs 溴水 Br₂(aq) 产物大辨析", "html": "\n<svg class=\"board-svg\" viewBox=\"0 0 780 235\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"乙烯与溶于有机溶剂的溴对比溴水反应主产物辨析图\">\n  <defs>\n    <linearGradient id=\"u27BrBg\" x1=\"0\" y1=\"0\" x2=\"1\" y2=\"1\">\n      <stop offset=\"0%\" stop-color=\"#f8fafc\"/>\n      <stop offset=\"100%\" stop-color=\"#fff1f2\"/>\n    </linearGradient>\n  </defs>\n  <rect x=\"0\" y=\"0\" width=\"780\" height=\"235\" rx=\"12\" fill=\"url(#u27BrBg)\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/>\n  <text x=\"390\" y=\"24\" text-anchor=\"middle\" font-size=\"13.6\" font-weight=\"800\" fill=\"#0f172a\">⚡ 烯烃加溴双胞胎终极辨析：黑暗中均瞬间褪色且无白雾，但溶剂决定主产物！</text>\n\n  <!-- Left Card: Br2 in organic solvent -->\n  <rect x=\"16\" y=\"38\" width=\"366\" height=\"184\" rx=\"10\" fill=\"#ffffff\" stroke=\"#93c5fd\" stroke-width=\"1.6\"/>\n  <rect x=\"16\" y=\"38\" width=\"366\" height=\"30\" rx=\"10\" fill=\"#dbeafe\"/>\n  <text x=\"199\" y=\"58\" text-anchor=\"middle\" font-size=\"12.8\" font-weight=\"800\" fill=\"#1d4ed8\">反应 ② 溶于有机溶剂的溴 Br₂ (in organic solvent)</text>\n  <text x=\"199\" y=\"85\" text-anchor=\"middle\" font-size=\"11.3\" font-weight=\"600\" fill=\"#475569\">无水环境（如溶于 CH₃CCl₃）· 黑暗中瞬间加成</text>\n\n  <rect x=\"28\" y=\"95\" width=\"342\" height=\"38\" rx=\"7\" fill=\"#eff6ff\" stroke=\"#bfdbfe\"/>\n  <text x=\"199\" y=\"119\" text-anchor=\"middle\" font-family=\"SF Mono, Menlo, monospace\" font-size=\"12.6\" font-weight=\"800\" fill=\"#1e3a8a\">CH₂=CH₂ + Br₂(organic solvent) ⟶ CH₂BrCH₂Br</text>\n\n  <rect x=\"46\" y=\"142\" width=\"306\" height=\"28\" rx=\"6\" fill=\"#ecfdf5\" stroke=\"#6ee7b7\"/>\n  <text x=\"199\" y=\"161\" text-anchor=\"middle\" font-size=\"12.5\" font-weight=\"800\" fill=\"#047857\">主产物：1,2-dibromoethane（1,2-二溴乙烷）</text>\n\n  <text x=\"199\" y=\"189\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#334155\">• 双键两颗碳各挂 1 个 —Br（纯粹卤成反应）</text>\n  <text x=\"199\" y=\"208\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"700\" fill=\"#1d4ed8\">• 现象：红棕 / 橙色溶液立即褪为无色（无白雾）</text>\n\n  <!-- Right Card: Aqueous bromine Br2(aq) -->\n  <rect x=\"398\" y=\"38\" width=\"366\" height=\"184\" rx=\"10\" fill=\"#ffffff\" stroke=\"#fda4af\" stroke-width=\"1.8\"/>\n  <rect x=\"398\" y=\"38\" width=\"366\" height=\"30\" rx=\"10\" fill=\"#ffe4e6\"/>\n  <text x=\"581\" y=\"58\" text-anchor=\"middle\" font-size=\"12.8\" font-weight=\"800\" fill=\"#be123c\">反应 ③ 溴水 Aqueous bromine, Br₂(aq) ★ 头号陷阱！</text>\n  <text x=\"581\" y=\"85\" text-anchor=\"middle\" font-size=\"11.3\" font-weight=\"700\" fill=\"#9f1239\">大量水参与平衡：Br₂(aq) + H₂O(l) ⇌ HOBr(aq) + HBr(aq)</text>\n\n  <rect x=\"410\" y=\"95\" width=\"342\" height=\"38\" rx=\"7\" fill=\"#fff1f2\" stroke=\"#fecdd3\"/>\n  <text x=\"581\" y=\"119\" text-anchor=\"middle\" font-family=\"SF Mono, Menlo, monospace\" font-size=\"12.2\" font-weight=\"800\" fill=\"#881337\">CH₂=CH₂ + Br₂(aq) + H₂O(l) ⟶ CH₂BrCH₂OH + HBr</text>\n\n  <rect x=\"424\" y=\"142\" width=\"314\" height=\"28\" rx=\"6\" fill=\"#fef2f2\" stroke=\"#f87171\"/>\n  <text x=\"581\" y=\"161\" text-anchor=\"middle\" font-size=\"12.5\" font-weight=\"800\" fill=\"#dc2626\">主产物：2-bromoethanol（2-溴乙醇 / 溴代醇）</text>\n\n  <text x=\"581\" y=\"189\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"700\" fill=\"#be123c\">⚠️ 双键碳一边加 —Br、另一边加 —OH（绝非主产二溴乙烷！）</text>\n  <text x=\"581\" y=\"208\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"700\" fill=\"#9f1239\">• 现象：黄棕 / 橙色溴水同样立即褪为无色（无白雾）</text>\n</svg>\n", "start": 158.366, "end": 319.414}, {"id": "b3_3", "tag": "板书 3 · 冷稀酸化高锰酸钾反应 (27.4C)", "title": "反应 ④ 与冷稀酸化 KMnO₄(aq) 生成二醇（Diols）及 'colourless' 铁律", "html": "\n                <div class=\"board-grid-2\">\n                  <div class=\"b-box b-blue\">\n                    <div class=\"b-box-title\">🟣 氧化型加成生成二醇（Diols，<code>[O]</code> 来自酸化高锰酸钾）</div>\n                    <div class=\"b-eq\">CH<sub>2</sub>=CH<sub>2</sub> + [O] + H<sub>2</sub>O &nbsp;──(<strong>MnO<sub>4</sub><sup>−</sup>(aq)/H<sup>+</sup>(aq)</strong>)──▶&nbsp; <strong>HOCH<sub>2</sub>CH<sub>2</sub>OH</strong></div>\n                    <div class=\"b-eq\">CH<sub>3</sub>CH=CHCH<sub>3</sub> + [O] + H<sub>2</sub>O &nbsp;──(<strong>MnO<sub>4</sub><sup>−</sup>/H<sup>+</sup></strong>)──▶&nbsp; <strong>CH<sub>3</sub>CH(OH)CH(OH)CH<sub>3</sub></strong></div>\n                    <ul class=\"b-points\">\n                      <li>双键打开，两颗双键碳各挂上 1 个羟基 <code>—OH</code>！</li>\n                      <li>命名保留元音 <strong><code>e</code></strong>：<code>ethene</code> ➔ <strong><code>ethan<u>e</u>-1,2-diol</code></strong>；<code>but-2-ene</code> ➔ <strong><code>butan<u>e</u>-2,3-diol</code></strong>。</li>\n                    </ul>\n                  </div>\n                  <div class=\"b-box b-rose\">\n                    <div class=\"b-box-title\">🚫 颜色变化采分与致命禁词红线</div>\n                    <div class=\"b-eq\"><strong>Purple</strong> (MnO<sub>4</sub><sup>−</sup>) &nbsp;──(immediately)──▶&nbsp; <strong>Colourless</strong> (Mn<sup>2+</sup>)</div>\n                    <ul class=\"b-points\">\n                      <li>标准表述：<strong><code>The purple solution turns colourless immediately.</code></strong>（紫色溶液立即褪为无色）。</li>\n                      <li><strong>⚠️ 零分禁词</strong>：<strong>严禁把 <code>colourless</code>（无色）写成 <em><code>clear</code></em></strong>！<code>clear</code> 仅表示澄清透明不浑浊（紫色高锰酸钾本身也是 clear 的！）。</li>\n                    </ul>\n                  </div>\n                </div>\n                ", "start": 320.034, "end": 431.182}], "turns": [{"speaker": "teacher", "role": "concept", "stepTag": "🤝 双键登场 · 共享四颗电子与加成反应定义", "boardId": "b3_1", "displayHtml": "欢迎来到第 3 讲！<code>27.4</code> 节主角<strong>烯烃（<code>alkenes</code>，通式 <code>CₙH₂ₙ, n ≥ 2</code>）</strong>是含 <strong><code>C=C</code> 双键</strong>的<strong>不饱和碳氢化合物（<code>unsaturated hydrocarbons</code>）</strong>（电子图中两碳重叠圈内共用 2 对共 4 个电子）。标志性反应为 <strong>addition reaction（加成反应）</strong>：两个或多个分子打开双键结合成<strong>单一较大分子（a single larger molecule）</strong>，不脱去任何小分子！", "start": 0.25, "end": 57.13}, {"speaker": "teacher", "role": "trap", "stepTag": "🕯️ 燃烧黑烟模板 · 碳质量百分比决定火焰浓烟", "boardId": "b3_1", "displayHtml": "先拿稳板书左框的 2 分高频简答题：为什么烯烃比同碳数烷烃燃烧火焰更亮、黑烟更浓？必写考评局两步采分链：① 烯烃具有<strong>更高的碳质量百分比（<code>higher percentage by mass of carbon</code></strong>，如 <code>C₂H₄</code> 85.7% &gt; <code>C₂H₆</code> 80.0%）；② 因此更易发生<strong>不完全燃烧（<code>incomplete combustion</code>）</strong>生成<strong>碳粒黑烟（<code>carbon particulates / soot</code>）</strong>！", "start": 57.47, "end": 106.574}, {"speaker": "teacher", "role": "example", "stepTag": "🧈 反应 ① 催化加氢 · 把液态植物油变成人造牛油", "boardId": "b3_1", "displayHtml": "开启四大加成反应！看板书右框<strong>反应 ① 催化加氢（<code>Catalytic hydrogenation</code>）</strong>：<code>CH₂=CH₂ + H₂ ⟶ CH₃CH₃</code>，可用 <code>Pt</code> / <code>Pd</code>（室温）或较廉价的 <strong><code>Ni</code>（需加热）</strong>作催化剂。工业上借此将不饱和液态植物油（<code>vegetable oils</code>）加氢硬化，制造固态/半固态<strong>人造牛油（<code>margarine</code>）</strong>！", "start": 106.914, "end": 157.746}, {"speaker": "teacher", "role": "concept", "stepTag": "🧪 反应 ② 有机溶剂溴加成 · 暗处秒褪色得二溴乙烷", "boardId": "b3_2", "displayHtml": "切到<strong>第 2 张板书</strong>左卡看<strong>反应 ② <code>Br₂ (in organic solvent)</code></strong>：无水有机溶剂环境下，即使<strong>在黑暗中（<code>in the dark</code>）</strong>，红棕/橙色溴溶液也会<strong>立即褪为无色（<code>decolorizes immediately</code>）且无白雾</strong>！双键两碳各加 1 个 <code>—Br</code>，生成单一产物 <strong><code>1,2-dibromoethane</code>（<code>CH₂BrCH₂Br</code>，1,2-二溴乙烷）</strong>。", "start": 158.366, "end": 208.91}, {"speaker": "teacher", "role": "trap", "stepTag": "💣 反应 ③ 溴水头号陷阱 · 主产物竟是 2-溴乙醇！", "boardId": "b3_2", "displayHtml": "盯紧右卡<strong>反应 ③ 溴水 <code>aqueous bromine, Br₂(aq)</code> 头号夺命陷阱</strong>！溴水中含大量水并存在平衡 <code>Br₂(aq) + H₂O(l) ⇌ HOBr(aq) + HBr(aq)</code>；通入乙烯虽同样<strong>立即褪为无色</strong>，但双键两碳分别加上 <code>—Br</code> 与 <code>—OH</code>，<strong>主要有机产物是 <code>2-bromoethanol</code>（<code>CH₂BrCH₂OH</code>，2-溴乙醇 / <code>bromoalkanol</code>）</strong>，绝非 1,2-二溴乙烷！", "start": 209.25, "end": 269.538}, {"speaker": "teacher", "role": "example", "stepTag": "🔍 审题保命口诀 · 下笔前先锁死溶剂有没有水！", "boardId": "b3_2", "displayHtml": "左右合看练就<strong>审题肌肉记忆</strong>：凡遇烯烃加溴，先圈定溶剂！写 <strong><code>in organic solvent</code>（无水）</strong> ➔ 主产 <strong><code>1,2-dibromoethane</code></strong>；写 <strong><code>aqueous bromine / Br₂(aq)</code>（有水）</strong> ➔ 方程式必带 <code>H₂O</code>（或分步写 <code>HOBr</code>），主产 <strong><code>2-bromoethanol</code></strong>（<code>CH₂BrCH₂Br</code> 仅属极微量副产，答主产物零分）！", "start": 269.878, "end": 319.414}, {"speaker": "teacher", "role": "concept", "stepTag": "🟣 反应 ④ 高锰酸钾加成 · 双键开出两个羟基变二醇", "boardId": "b3_3", "displayHtml": "切到<strong>第 3 张板书</strong>看<strong>反应 ④ 冷稀酸化高锰酸钾溶液（<code>acidified KMnO₄(aq)</code>）</strong>：方程式用 <code>[O] + H₂O</code> 表示，双键两颗碳各挂上 1 个 <code>—OH</code> 生成<strong>二醇（<code>diol</code>）</strong>！乙烯生成 <strong><code>ethane-1,2-diol</code></strong>，丁-2-烯（<code>but-2-ene</code>）生成 <strong><code>butane-2,3-diol</code></strong>（后缀 <code>-diol</code> 以辅音 <code>d</code> 开头，词干末尾字母 <strong><code>e</code> 必须保留</strong>！）。", "start": 320.034, "end": 376.89}, {"speaker": "teacher", "role": "trap", "stepTag": "🚫 颜色禁词红线 · 只准写 colourless 严禁写 clear！", "boardId": "b3_3", "displayHtml": "死守板书右框<strong>颜色采分红线</strong>：紫色 <code>MnO₄⁻(aq)</code> 被还原为无色 <code>Mn²⁺(aq)</code>，标准答法必写 <strong><code>turns from purple to colourless immediately</code>（由紫色立即变为无色）</strong>！<strong>严禁把 <code>colourless</code> 错写成 <em><code>clear</code></em></strong>（<code>clear</code> 仅指澄清不浑浊，紫色溶液本身也是 clear 的，写 clear 直接零分）！下一讲迎战化学鉴别满分模板！", "start": 377.23, "end": 431.182}], "quickChecks": [{"q": "在室温黑暗条件下将乙烯（ethene）通入溴水（aqueous bromine, Br₂(aq)）中，生成的主要有机产物（major organic product）是什么？", "options": ["A. 溴乙烷（bromoethane, CH₃CH₂Br）", "B. 1,2-二溴乙烷（1,2-dibromoethane, CH₂BrCH₂Br）", "C. 2-溴乙醇（2-bromoethanol, CH₂BrCH₂OH）", "D. 乙-1,2-二醇（ethane-1,2-diol, HOCH₂CH₂OH）"], "ans": 2, "exp": "溴水 Br₂(aq) 含有大量水并生成次溴酸 HOBr(aq)，乙烯与其加成时两个碳分别接上 —Br 和 —OH，主要有机产物是 2-溴乙醇（2-bromoethanol, CH₂BrCH₂OH）！只有用溶于有机溶剂的溴时主产物才是 B。"}, {"q": "将丁-2-烯（but-2-ene）与冷稀酸化高锰酸钾溶液（cold dilute acidified KMnO₄(aq)）摇匀，正确的颜色变化及有机产物名称是什么？", "options": ["A. 由紫色变为澄清（purple to clear）；butan-2,3-diol", "B. 由紫色变为无色（purple to colourless）；butane-2,3-diol", "C. 由橙色变为绿色（orange to green）；butane-1,2-diol", "D. 由紫色变为无色（purple to colourless）；butan-2-ol"], "ans": 1, "exp": "酸化 KMnO₄(aq) 由紫色变为无色（from purple to colourless，绝不可写 clear！）；but-2-ene 的双键位于 C-2 与 C-3 之间，各加一个 —OH 生成丁-2,3-二醇，且保留元音 e 拼作 butane-2,3-diol。"}], "duration": 431.69, "audioFile": "audio/03_27.4_烯烃不饱和双键四大加成反应与溴水头号陷阱.mp3", "fullStart": 879.94, "fullEnd": 1311.58}, {"id": "ep4", "epNum": "第 4 讲", "code": "27.5", "fileSlug": "04_27.5_烷烃与烯烃化学鉴别满分规范及重铬酸钾禁区", "titleZh": "化学鉴别满分规范：如何精准区分烷烃与烯烃（附酸化重铬酸钾禁区）", "titleEn": "Chemical Tests to Distinguish Alkanes and Alkenes & Exam Red Lines", "goal": "全景对比烷烃自由基取代与烯烃加成反应的五大核心差异，熟练套用考评局“试剂与避光条件 + 阳性现象 + 阴性对照”满分三步鉴别模板，彻底避开误用酸化重铬酸钾溶液及燃烧黑烟法两大万年丢分禁区。", "keyTerms": [{"en": "substitution vs addition", "zh": "取代反应 vs 加成反应"}, {"en": "in the dark", "zh": "在黑暗中 / 避光（排除烷烃取代干扰）"}, {"en": "turns colourless immediately", "zh": "立即褪为无色（烯烃阳性现象）"}, {"en": "no observable change", "zh": "无明显变化（烷烃必写阴性对照！）"}, {"en": "acidified KMnO₄(aq)", "zh": "酸化高锰酸钾溶液（紫变无色）"}, {"en": "acidified K₂Cr₂O₇(aq)", "zh": "酸化重铬酸钾溶液（对烯烃无效！）"}], "boards": [{"id": "b4_1", "tag": "板书 1 · 取代 vs 加成总对决 (27.5A)", "title": "Unit 27 全景收官总表：烷烃自由基取代 vs 烯烃加成反应五大维度对决", "html": "\n                <table class=\"b-mini-table\">\n                  <thead>\n                    <tr>\n                      <th>对比维度</th>\n                      <th>烷烃 Alkane（如己烷 <code>hexane</code>）</th>\n                      <th>烯烃 Alkene（如己-1-烯 <code>hex-1-ene</code>）</th>\n                    </tr>\n                  </thead>\n                  <tbody>\n                    <tr>\n                      <td><strong>饱和度与特征键</strong></td>\n                      <td><strong>饱和 <code>Saturated</code></strong>（仅含 <code>C—C</code>、<code>C—H</code> 单键）</td>\n                      <td><strong>不饱和 <code>Unsaturated</code></strong>（含 <strong><code>C=C</code> 双键</strong>活性中心）</td>\n                    </tr>\n                    <tr>\n                      <td><strong>标志反应类型</strong></td>\n                      <td><strong><code>Free radical substitution</code></strong>（自由基取代：有进有出）</td>\n                      <td><strong><code>Addition reaction</code></strong>（加成反应：只进不出，合二为一）</td>\n                    </tr>\n                    <tr>\n                      <td><strong>与溴反应条件及快慢</strong></td>\n                      <td>必须有 <strong><code>UV light / sunlight</code></strong>；<strong>缓慢褪色（<code>slowly</code>）</strong></td>\n                      <td>室温<strong>黑暗中（<code>in the dark</code>）亦可</strong>；<strong>立即褪色（<code>immediately</code>）</strong></td>\n                    </tr>\n                    <tr>\n                      <td><strong>管口酸雾副产物</strong></td>\n                      <td>产生 <strong><code>HBr(g)</code> 白雾（<code>misty fumes</code>）</strong></td>\n                      <td><strong>无白雾（No misty fumes）</strong></td>\n                    </tr>\n                    <tr>\n                      <td><strong>有机产物纯度</strong></td>\n                      <td>一取代至多取代卤代烷的<strong>混合物（Mixture）</strong></td>\n                      <td><strong>单一主产物</strong>（有机溶剂得二溴代烷；溴水得溴代醇）</td>\n                    </tr>\n                  </tbody>\n                </table>\n                ", "start": 0.25, "end": 52.21}, {"id": "b4_2", "tag": "板书 2 · 满分化学鉴别模板 (27.5B)", "title": "HKEAA 'Describe a chemical test' 满分三段式：试剂条件 + 阳性现象 + 阴性对照！", "html": "\n                <div class=\"b-quote\">\n                  <div class=\"b-quote-en\"><strong>Full-Mark 3-Part Formula</strong> = ① Reagent + <strong><code>in the dark</code></strong> &nbsp;+&nbsp; ② Alkene: <strong><code>turns colourless immediately</code></strong> &nbsp;+&nbsp; ③ Alkane: <strong><code>no observable change</code></strong>!</div>\n                  <div class=\"b-quote-zh\">⚠️ <strong>考场最冤扣分</strong>：只写烯烃褪色，漏写烷烃“<strong><code>whereas the alkane shows no observable change</code>（无明显变化）</strong>”，必定倒扣 1 分！</div>\n                </div>\n                <div class=\"b-scheme\">\n<pre>【标准方案 A：溴测试 —— 必须注明 in the dark！】\n  Add Br₂ (in organic solvent) [or aqueous bromine, Br₂(aq)] to both samples separately IN THE DARK.\n  • Alkene: turns the reddish-brown / orange solution COLOURLESS IMMEDIATELY.\n  • Alkane: shows NO OBSERVABLE CHANGE.\n\n【标准方案 B：酸化氧化剂测试 —— 认准冷稀酸化高锰酸钾！】\n  Add cold dilute acidified potassium permanganate solution, KMnO₄(aq)/H⁺(aq), to both samples separately.\n  • Alkene: turns the PURPLE solution COLOURLESS IMMEDIATELY.\n  • Alkane: shows NO OBSERVABLE CHANGE.</pre>\n                </div>\n                <div class=\"b-note\">💡 <strong>必考追问：为什么用溴鉴别时必须写 <code>in the dark</code>？</strong> 因为在阳光 / <code>UV light</code> 下，烷烃也会发生自由基取代反应使溴溶液缓慢褪色，避光才能确保只有烯烃反应！</div>\n                ", "start": 52.83, "end": 208.358}, {"id": "b4_3", "tag": "板书 3 · 两大万年丢分禁区 (27.5C)", "title": "考场保命双红线：绝对禁用酸化重铬酸钾 K₂Cr₂O₇(aq) + 拒答燃烧黑烟法！", "html": "\n                <div class=\"board-grid-2\">\n                  <div class=\"b-box b-rose\">\n                    <div class=\"b-box-title\">🚫 禁区 ①：绝不可用橙色 <code>acidified K₂Cr₂O₇(aq)</code> 测烯烃！</div>\n                    <div class=\"b-eq\">Alkane 或 Alkene + Cr<sub>2</sub>O<sub>7</sub><sup>2−</sup>(aq)/H<sup>+</sup>(aq) &nbsp;⟶&nbsp; <strong>均保持橙色（不反应！）</strong></div>\n                    <ul class=\"b-points\">\n                      <li>酸化重铬酸钾的氧化力<strong>不足以氧化 <code>C=C</code> 双键</strong>！加入烷烃或烯烃<strong>均无明显变化（绝不会由橙变绿！）</strong>。</li>\n                      <li>🔭 <strong>跨册剧透</strong>：橙色 <code>acidified K₂Cr₂O₇(aq)</code> 变绿是留到 Topic 8 检验<strong>一级醇（<code>1°</code>）、二级醇（<code>2°</code>）和醛（<code>aldehydes</code>）</strong>的专属试剂！</li>\n                    </ul>\n                  </div>\n                  <div class=\"b-box b-amber\">\n                    <div class=\"b-box-title\">🚫 禁区 ②：问 <code>chemical test</code> 切勿答“点燃比黑烟”！</div>\n                    <div class=\"b-eq\">❌ <em>Burn both samples and compare sootiness of flames</em> &nbsp;（<strong>不获给分！</strong>）</div>\n                    <ul class=\"b-points\">\n                      <li>若未知样品碳链长度不同（如长链烷烃 vs 短链烯烃），二者火焰黑烟均可能很浓，无法可靠判定官能团。</li>\n                      <li>凡题目要求 <strong><code>Describe a chemical test</code></strong>，一律老老实实答<strong>避光溴测试</strong>或<strong>冷稀酸化 <code>KMnO₄(aq)</code></strong>！</li>\n                    </ul>\n                  </div>\n                </div>\n                ", "start": 208.978, "end": 420.094}], "turns": [{"speaker": "teacher", "role": "concept", "stepTag": "⚔️ 全景对决 · 烷烃取代与烯烃加成的五大差异", "boardId": "b4_1", "displayHtml": "欢迎来到 Unit 27 收官第 4 讲！先看<strong>第 1 张板书</strong>全景对决表：饱和烷烃走“有进有出”的 <strong><code>free radical substitution</code></strong>（需 <code>UV light</code>、缓慢褪色、冒 <code>HBr</code> 白雾、得混合物）；不饱和烯烃凭 <code>C=C</code> 双键走“只进不出”的 <strong><code>addition reaction</code></strong>（黑暗中瞬间褪色、无白雾、得单一主产物）！", "start": 0.25, "end": 52.21}, {"speaker": "teacher", "role": "concept", "stepTag": "📋 满分三要素 · 漏写烷烃阴性对照必扣一分！", "boardId": "b4_2", "displayHtml": "切到<strong>第 2 张板书</strong>掌握考评局鉴别题<strong>满分三要素</strong>：① 试剂与关键条件 + ② 烯烃阳性现象 + ③ <strong>烷烃阴性对照（<code>no observable change</code>）</strong>！切记考场最冤扣分：只写烯烃褪色而漏写“<code>whereas the alkane shows no observable change</code>”，两分题必定白丢 1 分！", "start": 52.83, "end": 106.446}, {"speaker": "teacher", "role": "example", "stepTag": "🌑 方案 A 实战 · 用溴鉴别为什么必写 in the dark？", "boardId": "b4_2", "displayHtml": "看深色框<strong>标准方案 A（避光溴测试）</strong>：向两份样品分别加入 <code>Br₂ (in organic solvent)</code> 或 <code>Br₂(aq)</code>，且<strong>必须注明 <code>in the dark</code>（在黑暗中）</strong>！烯烃使红棕/橙色溶液<strong>立即褪为无色（<code>colourless immediately</code>）</strong>，烷烃则<strong>无明显变化</strong>。必背追问：若在阳光/<code>UV light</code> 下，烷烃也会发生自由基取代缓慢褪色而干扰判断！", "start": 106.786, "end": 155.746}, {"speaker": "teacher", "role": "example", "stepTag": "🟣 方案 B 实战 · 冷稀酸化高锰酸钾紫变无色", "boardId": "b4_2", "displayHtml": "再看<strong>标准方案 B（冷稀酸化高锰酸钾测试）</strong>——尤其当题目限定使用 <code>acidified oxidizing agent</code> 时必选！向两份样品分别加入 <strong><code>cold dilute acidified KMnO₄(aq)</code></strong> 并摇匀：烯烃使<strong>紫色溶液立即褪为无色（<code>purple to colourless immediately</code>）</strong>，而烷烃<strong>无明显变化（<code>no observable change</code>）</strong>。", "start": 156.086, "end": 208.358}, {"speaker": "teacher", "role": "trap", "stepTag": "🚫 头号禁区 ① · 酸化重铬酸钾对双键完全无效！", "boardId": "b4_3", "displayHtml": "切到<strong>第 3 张板书</strong>左框敲响最高警钟——<strong>禁区 ①：绝对禁止用橙色酸化重铬酸钾溶液（<code>acidified K₂Cr₂O₇(aq)</code>）检验烯烃</strong>！它的氧化能力不足以氧化 <code>C=C</code> 双键，加入烷烃或烯烃中<strong>两者均无明显变化（均保持橙色，绝不会变绿！）</strong>，写它做鉴别直接零分！", "start": 208.978, "end": 258.25}, {"speaker": "teacher", "role": "concept", "stepTag": "🔭 跨册剧透 · 两瓶酸化氧化剂的黄金分工密码", "boardId": "b4_3", "displayHtml": "提前掌握跨册破题密码：橙色 <strong><code>acidified K₂Cr₂O₇(aq)</code></strong> 留到 Topic 8 专测<strong>伯醇（<code>1°</code>）、仲醇（<code>2°</code>）与醛（<code>aldehydes</code>）</strong>（橙变绿），对 <code>C=C</code> 完全无效；而紫色 <strong><code>acidified KMnO₄(aq)</code></strong> 既能氧化上述含氧基团，又能在室温下使 <strong><code>C=C</code> 双键</strong>褪色！这一差异在 DSE 推断大题中价值千金。", "start": 258.59, "end": 309.182}, {"speaker": "teacher", "role": "trap", "stepTag": "🚫 头号禁区 ② · 问化学测试绝不答点燃比黑烟！", "boardId": "b4_3", "displayHtml": "再看板书右框<strong>禁区 ②</strong>：当题目明确要求 <strong><code>Describe a chemical test</code>（化学测试）</strong>时，<strong>切勿回答“点燃样品比较火焰黑烟浓淡”</strong>！若两未知物碳链长度不同，黑烟程度无法可靠区分官能团，考评局一律不给分；请务必选用<strong>避光溴测试</strong>或<strong>冷稀酸化 <code>KMnO₄(aq)</code></strong>！", "start": 309.522, "end": 361.962}, {"speaker": "teacher", "role": "summary", "stepTag": "🎓 全章大满贯 · 四句真言串联 Unit 27 迈向聚合物", "boardId": "b4_3", "displayHtml": "恭喜圆满通关 <strong>Unit 27</strong>！四句真言收束全章：① 烷烃凭 <strong><code>UV light</code></strong> 走三步自由基取代，电子图点叉用 <code>+</code> 拆开画；② 隔绝空气催化裂化补汽油、产烯烃，先撤导管后停火防 <strong><code>sucking back</code></strong>；③ 烯烃双键四大加成，死磕<strong>溴水主产 <code>2-bromoethanol</code></strong> 与高锰酸钾 <strong><code>purple to colourless</code></strong>；④ 鉴别必带 <code>in the dark</code> 与 <code>no observable change</code>，<strong>禁用重铬酸钾</strong>！下一单元 <strong>Unit 28</strong> 进军加成聚合物（<code>Addition polymers</code>）！", "start": 362.302, "end": 420.094}], "quickChecks": [{"q": "下列哪一种试剂**不能**在室温下区分液态己烷（hexane）与液态己-1-烯（hex-1-ene）？", "options": ["A. 避光条件下的溶于有机溶剂的溴（Br₂ in organic solvent, in the dark）", "B. 避光条件下的溴水（aqueous bromine, Br₂(aq), in the dark）", "C. 冷稀酸化高锰酸钾溶液（cold dilute acidified KMnO₄(aq)）", "D. 酸化重铬酸钾溶液（acidified potassium dichromate solution, K₂Cr₂O₇(aq)/H⁺(aq)）"], "ans": 3, "exp": "酸化重铬酸钾溶液（acidified K₂Cr₂O₇(aq)）的氧化力不足以氧化碳碳双键（C=C），加入己烷或己-1-烯中均无明显变化（保持橙色），故无法鉴别两者！"}, {"q": "用溴水（aqueous bromine）鉴别乙烷气体（ethane）与乙烯气体（ethene）时，为什么要强调“在黑暗中进行（in the dark）”？", "options": ["A. 因为乙烯在阳光下不会发生加成反应", "B. 因为在紫外光或阳光下，乙烷也会缓慢发生自由基取代反应使溴水褪色，干扰鉴别", "C. 因为溴水在阳光下会瞬间变成紫色沉淀", "D. 因为黑暗能把乙烷转化为乙烯"], "ans": 1, "exp": "在阳光或紫外光（UV light）下，乙烷（烷烃）也会与溴发生自由基取代反应使溶液缓慢褪色；在黑暗中（in the dark）乙烷完全不反应（no observable change），只有乙烯立即加成褪色，对比最鲜明！"}], "duration": 420.6, "audioFile": "audio/04_27.5_烷烃与烯烃化学鉴别满分规范及重铬酸钾禁区.mp3", "fullStart": 1313.08, "fullEnd": 1733.62}]};
+
+    (function () {
+      const data = window.COURSE_DATA;
+      const episodes = data.episodes;
+      const STORAGE_KEY = 'u27_audio_preview_v1';
+
+      let saved = {};
+      try { saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}'); } catch (e) {}
+
+      const state = {
+        currentEpIdx: typeof saved.currentEpIdx === 'number' && saved.currentEpIdx < episodes.length ? saved.currentEpIdx : 0,
+        doneEps: saved.doneEps || {},
+        autoScroll: true,
+        autoPlayNext: true,
+        speed: saved.speed || 1.0
+      };
+
+      const audio = document.getElementById('classroom-audio');
+      const epStrip = document.getElementById('ep-strip');
+      const epHero = document.getElementById('ep-hero');
+      const boardsContainer = document.getElementById('boards-container');
+      const transcriptList = document.getElementById('transcript-list');
+      const quizContainer = document.getElementById('quiz-container');
+
+      const playBtn = document.getElementById('play-btn');
+      const seekSlider = document.getElementById('seek-slider');
+      const curTimeEl = document.getElementById('cur-time');
+      const durTimeEl = document.getElementById('dur-time');
+      const dockEpLabel = document.getElementById('dock-ep-label');
+      const speedSelect = document.getElementById('speed-select');
+      const autoScrollBtn = document.getElementById('auto-scroll-toggle');
+      const autoplayBtn = document.getElementById('autoplay-btn');
+      const downloadMerged = document.getElementById('download-merged-link');
+      const downloadEp = document.getElementById('download-ep-link');
+      const totalDurBadge = document.getElementById('total-dur-badge');
+      const companionLink = document.getElementById('companion-site-link');
+      const handoutMdLink = document.getElementById('handout-md-link');
+
+      if (/\.github\.io$/i.test(window.location.hostname)) {
+        companionLink.href = 'https://kenlin666bot.github.io/mastering-organic-chem/';
+        handoutMdLink.href = 'https://github.com/KenLin666Bot/unit27-audio-preview/blob/main/Unit27_%E5%8F%8C%E8%AF%AD%E8%AF%BE%E5%A0%82%E8%AE%B2%E4%B9%89%E4%B8%8E%E9%80%90%E5%AD%97%E7%A8%BF.md';
+        document.querySelectorAll('.unit-jump-link').forEach(a => {
+          const gh = a.getAttribute('data-gh');
+          if (gh) a.href = gh;
+        });
+      }
+
+      let isDraggingSlider = false;
+      let activeTurnIdx = -1;
+      let activeBoardId = null;
+
+      function fmtTime(sec) {
+        if (!isFinite(sec) || sec < 0) sec = 0;
+        const m = Math.floor(sec / 60);
+        const s = Math.floor(sec % 60);
+        return String(m).padStart(2, '0') + ':' + String(s).padStart(2, '0');
+      }
+
+      function saveState() {
+        try {
+          localStorage.setItem(STORAGE_KEY, JSON.stringify({
+            currentEpIdx: state.currentEpIdx,
+            doneEps: state.doneEps,
+            speed: state.speed
+          }));
+        } catch (e) {}
+      }
+
+      downloadMerged.href = encodeURI(data.mergedAudioFile);
+      totalDurBadge.textContent = fmtTime(data.totalDuration);
+      speedSelect.value = String(state.speed);
+
+      function renderEpisodeStrip() {
+        epStrip.innerHTML = episodes.map((ep, idx) => {
+          const isDone = !!state.doneEps[ep.id];
+          const activeCls = idx === state.currentEpIdx ? 'active' : '';
+          return `
+            <button class="ep-tab ${activeCls}" data-ep-idx="${idx}">
+              <div class="ep-tab-top">
+                <span>${ep.epNum} · ${ep.code}</span>
+                ${isDone ? '<span class="ep-done-dot">✓ 已学完</span>' : ''}
+              </div>
+              <div class="ep-tab-title">${ep.titleZh}</div>
+              <div class="ep-tab-meta">
+                <span>🎧 约 ${fmtTime(ep.duration)}</span>
+                <span>${ep.boards.length} 张板书</span>
+              </div>
+            </button>
+          `;
+        }).join('');
+
+        epStrip.querySelectorAll('.ep-tab').forEach(btn => {
+          btn.addEventListener('click', () => {
+            const idx = Number(btn.getAttribute('data-ep-idx'));
+            loadEpisode(idx, true);
+          });
+        });
+      }
+
+      function loadEpisode(idx, autoPlay) {
+        state.currentEpIdx = idx;
+        activeTurnIdx = -1;
+        activeBoardId = null;
+        saveState();
+        renderEpisodeStrip();
+
+        const ep = episodes[idx];
+
+        epHero.innerHTML = `
+          <div class="ep-hero-kicker">
+            <span>📚 Mastering Chemistry · Unit 27</span>
+            <span>|</span>
+            <span>${ep.epNum}（课本 ${ep.code}）</span>
+          </div>
+          <h1 class="ep-hero-title">${ep.titleZh}</h1>
+          <div class="ep-hero-en">${ep.titleEn}</div>
+          <div class="ep-goal-box">🎯 <strong>本讲预习目标：</strong>${ep.goal}</div>
+          <div class="term-row">
+            ${ep.keyTerms.map(t => `<span class="term-chip"><b>${t.en}</b> · ${t.zh}</span>`).join('')}
+          </div>
+        `;
+
+        boardsContainer.innerHTML = ep.boards.map((b, bIdx) => `
+          <section class="board-card ${bIdx === 0 ? 'is-active-board' : ''}" id="card-${b.id}" data-board-id="${b.id}">
+            <div class="board-head">
+              <div class="board-tag-wrap">
+                <span class="board-tag">${b.tag}</span>
+                <span class="live-pill">● 正在讲授此板书</span>
+              </div>
+              <button class="board-jump-btn" data-jump="${b.start}">▶ 跳到此板书 (${fmtTime(b.start)})</button>
+            </div>
+            <h2 class="board-title">${b.title}</h2>
+            <div class="board-body">${b.html}</div>
+          </section>
+        `).join('');
+
+        boardsContainer.querySelectorAll('.board-jump-btn').forEach(btn => {
+          btn.addEventListener('click', () => {
+            const t = parseFloat(btn.getAttribute('data-jump') || '0');
+            seekAndPlay(t);
+          });
+        });
+
+        transcriptList.innerHTML = ep.turns.map((t, tIdx) => `
+          <div class="turn-bubble role-${t.role || 'concept'}" id="turn-${tIdx}" data-turn-idx="${tIdx}" data-start="${t.start}">
+            <div class="turn-meta">
+              <span class="speaker-name">${t.stepTag}</span>
+              <span class="turn-time">${fmtTime(t.start)}</span>
+            </div>
+            <div class="turn-text">${t.displayHtml}</div>
+          </div>
+        `).join('');
+
+        transcriptList.querySelectorAll('.turn-bubble').forEach(div => {
+          div.addEventListener('click', () => {
+            const t = parseFloat(div.getAttribute('data-start') || '0');
+            seekAndPlay(t);
+          });
+        });
+
+        quizContainer.innerHTML = `
+          <h3 class="quiz-head">⚡ 听完测一测：30 秒预习快问快答</h3>
+          ${ep.quickChecks.map((q, qIdx) => `
+            <div class="q-item" data-q-idx="${qIdx}">
+              <div class="q-stem">${qIdx + 1}. ${q.q}</div>
+              <div class="q-opts">
+                ${q.options.map((opt, oIdx) => `
+                  <button class="q-opt-btn" data-q="${qIdx}" data-o="${oIdx}">${opt}</button>
+                `).join('')}
+              </div>
+              <div class="q-exp" id="q-exp-${qIdx}">💡 <strong>解析：</strong>${q.exp}</div>
+            </div>
+          `).join('')}
+        `;
+
+        quizContainer.querySelectorAll('.q-opt-btn').forEach(btn => {
+          btn.addEventListener('click', () => {
+            const qIdx = Number(btn.getAttribute('data-q'));
+            const oIdx = Number(btn.getAttribute('data-o'));
+            const qObj = ep.quickChecks[qIdx];
+            const parent = btn.closest('.q-item');
+            parent.querySelectorAll('.q-opt-btn').forEach((b, i) => {
+              b.classList.remove('correct', 'wrong');
+              if (i === qObj.ans) b.classList.add('correct');
+            });
+            if (oIdx !== qObj.ans) btn.classList.add('wrong');
+            document.getElementById(`q-exp-${qIdx}`).style.display = 'block';
+          });
+        });
+
+        audio.src = encodeURI(ep.audioFile);
+        audio.playbackRate = state.speed;
+        downloadEp.href = encodeURI(ep.audioFile);
+        dockEpLabel.textContent = `${ep.epNum} (${ep.code}) · ${ep.titleZh}`;
+        seekSlider.max = String(ep.duration);
+        seekSlider.value = '0';
+        curTimeEl.textContent = '00:00';
+        durTimeEl.textContent = fmtTime(ep.duration);
+
+        if (autoPlay) {
+          audio.play().catch(() => {});
+        } else {
+          playBtn.textContent = '▶ 开始听课';
+        }
+      }
+
+      function seekAndPlay(targetSec) {
+        if (audio.readyState >= 1) {
+          audio.currentTime = targetSec;
+          audio.play().catch(() => {});
+        } else {
+          audio.addEventListener('loadedmetadata', function onMeta() {
+            audio.removeEventListener('loadedmetadata', onMeta);
+            audio.currentTime = targetSec;
+            audio.play().catch(() => {});
+          });
+          audio.load();
+        }
+      }
+
+      function syncClassroomHighlight(t) {
+        const ep = episodes[state.currentEpIdx];
+        if (!ep) return;
+
+        let foundIdx = -1;
+        for (let i = 0; i < ep.turns.length; i++) {
+          const turn = ep.turns[i];
+          const nextStart = (i + 1 < ep.turns.length) ? ep.turns[i + 1].start : ep.duration + 1;
+          if (t >= turn.start - 0.08 && t < nextStart) {
+            foundIdx = i;
+            break;
+          }
+        }
+
+        if (foundIdx !== -1 && foundIdx !== activeTurnIdx) {
+          activeTurnIdx = foundIdx;
+          transcriptList.querySelectorAll('.turn-bubble').forEach((el, i) => {
+            el.classList.toggle('active-turn', i === foundIdx);
+          });
+          const activeTurnEl = document.getElementById(`turn-${foundIdx}`);
+          if (activeTurnEl && state.autoScroll) {
+            activeTurnEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          }
+
+          const targetBoardId = ep.turns[foundIdx].boardId;
+          if (targetBoardId && targetBoardId !== activeBoardId) {
+            const prevBoard = activeBoardId;
+            activeBoardId = targetBoardId;
+            boardsContainer.querySelectorAll('.board-card').forEach(card => {
+              card.classList.toggle('is-active-board', card.getAttribute('data-board-id') === targetBoardId);
+            });
+            if (prevBoard !== null && state.autoScroll) {
+              const cardEl = document.getElementById(`card-${targetBoardId}`);
+              if (cardEl) {
+                const y = cardEl.getBoundingClientRect().top + window.scrollY - 82;
+                window.scrollTo({ top: y, behavior: 'smooth' });
+              }
+            }
+          }
+        }
+      }
+
+      audio.addEventListener('timeupdate', () => {
+        const t = audio.currentTime;
+        if (!isDraggingSlider) {
+          seekSlider.value = String(t);
+        }
+        curTimeEl.textContent = fmtTime(t);
+        syncClassroomHighlight(t);
+      });
+
+      audio.addEventListener('loadedmetadata', () => {
+        if (audio.duration && isFinite(audio.duration)) {
+          seekSlider.max = String(audio.duration);
+          durTimeEl.textContent = fmtTime(audio.duration);
+        }
+        audio.playbackRate = state.speed;
+      });
+
+      audio.addEventListener('play', () => {
+        playBtn.textContent = '⏸ 暂停';
+      });
+
+      audio.addEventListener('pause', () => {
+        playBtn.textContent = '▶ 继续听课';
+      });
+
+      audio.addEventListener('ended', () => {
+        const ep = episodes[state.currentEpIdx];
+        state.doneEps[ep.id] = true;
+        saveState();
+        renderEpisodeStrip();
+        if (state.autoPlayNext && state.currentEpIdx + 1 < episodes.length) {
+          loadEpisode(state.currentEpIdx + 1, true);
+        } else {
+          playBtn.textContent = '↺ 重听本讲';
+        }
+      });
+
+      playBtn.addEventListener('click', () => {
+        if (audio.paused) {
+          audio.play().catch(() => {});
+        } else {
+          audio.pause();
+        }
+      });
+
+      document.getElementById('rew-btn').addEventListener('click', () => {
+        audio.currentTime = Math.max(0, audio.currentTime - 10);
+      });
+
+      document.getElementById('fwd-btn').addEventListener('click', () => {
+        audio.currentTime = Math.min(audio.duration || 9999, audio.currentTime + 10);
+      });
+
+      document.getElementById('prev-ep-btn').addEventListener('click', () => {
+        if (state.currentEpIdx > 0) loadEpisode(state.currentEpIdx - 1, !audio.paused);
+      });
+
+      document.getElementById('next-ep-btn').addEventListener('click', () => {
+        if (state.currentEpIdx + 1 < episodes.length) loadEpisode(state.currentEpIdx + 1, !audio.paused);
+      });
+
+      seekSlider.addEventListener('input', () => {
+        isDraggingSlider = true;
+        curTimeEl.textContent = fmtTime(parseFloat(seekSlider.value));
+      });
+
+      seekSlider.addEventListener('change', () => {
+        audio.currentTime = parseFloat(seekSlider.value);
+        isDraggingSlider = false;
+      });
+
+      speedSelect.addEventListener('change', () => {
+        state.speed = parseFloat(speedSelect.value);
+        audio.playbackRate = state.speed;
+        saveState();
+      });
+
+      autoScrollBtn.addEventListener('click', () => {
+        state.autoScroll = !state.autoScroll;
+        autoScrollBtn.classList.toggle('on', state.autoScroll);
+        autoScrollBtn.textContent = state.autoScroll ? '🎯 自动跟随：开' : '🎯 自动跟随：关';
+      });
+
+      autoplayBtn.addEventListener('click', () => {
+        state.autoPlayNext = !state.autoPlayNext;
+        autoplayBtn.textContent = state.autoPlayNext ? '🔁 连播：开' : '🔁 连播：关';
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (['INPUT', 'SELECT', 'TEXTAREA'].includes(e.target.tagName)) return;
+        if (e.code === 'Space') {
+          e.preventDefault();
+          playBtn.click();
+        } else if (e.code === 'ArrowLeft') {
+          audio.currentTime = Math.max(0, audio.currentTime - 5);
+        } else if (e.code === 'ArrowRight') {
+          audio.currentTime = Math.min(audio.duration || 9999, audio.currentTime + 5);
+        }
+      });
+
+      loadEpisode(state.currentEpIdx, false);
+    })();
+  </script>
+</body>
+</html>
